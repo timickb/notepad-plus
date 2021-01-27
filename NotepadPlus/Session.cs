@@ -14,6 +14,22 @@ namespace NotepadPlus
     {
         private RichTextBox _textArea;
 
+        /// <summary>
+        /// Свойство показывает, существует ли
+        /// уже файл на диске или был создан
+        /// только что и ни разу не сохранялся.
+        /// </summary>
+        public bool Pathed { get; private set; }
+        
+        /// <summary>
+        /// Свойство показывает, нет
+        /// ли в файле несохраненных изменений.
+        /// </summary>
+        public bool Saved { get; private set; }
+        
+        public string Path { get; set; }
+
+
         public Session(string title) : base(title)
         {
             _textArea = new RichTextBox { Dock = DockStyle.Fill };

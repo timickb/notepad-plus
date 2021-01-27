@@ -6,9 +6,10 @@
     <e p="D:\SharpTasks\NotepadPlus" t="IncludeFlat">
       <e p="NotepadPlus" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Form1.cs" t="Include" />
-        <e p="Form1.Designer.cs" t="Include" />
-        <e p="Form1.resx" t="Include" />
+        <e p="MainFrame.cs" t="Include" />
+        <e p="MainFrame.Designer.cs" t="Include" />
+        <e p="MainFrame.resx" t="Include" />
+        <e p="MainFrameEventHandler.cs" t="Include" />
         <e p="NotepadPlus.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
