@@ -10,7 +10,7 @@ namespace NotepadPlus
         // TODO
         public static FileType DetermineFileType(StreamReader sr, string filePath)
         {
-            return Path.GetExtension(filePath) == "rtf" ? FileType.RichText : FileType.PlainText;
+            return Path.GetExtension(filePath) == ".rtf" ? FileType.RichText : FileType.PlainText;
         }
     }
 }

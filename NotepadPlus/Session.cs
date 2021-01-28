@@ -12,7 +12,7 @@ namespace NotepadPlus
     /// содержащая информацию о соответствующем
     /// файле.
     /// </summary>
-    public class Session : TabPage
+    public partial class Session : TabPage
     {
         /// <summary>
         /// Способ создания сессии путем загрузки
@@ -20,14 +20,16 @@ namespace NotepadPlus
         /// </summary>
         /// <param name="stream">Stream.</param>
         /// <param name="path">Полный путь к файлу на диске.</param>
-        /// <returns></returns>
+        /// <returns>Объект новой сессии.</returns>
         public static Session LoadFile(Stream stream, string path)
         {
             StreamReader sr = new StreamReader(stream);
 
             path = Path.GetFullPath(path);
+
+            FileType type = Utils.DetermineFileType(sr, path);
             
-            Session newSession = new Session(path, Utils.DetermineFileType(sr, path));
+            Session newSession = new Session(path, type);
             newSession.SetContent(sr.ReadToEnd());
             newSession.FilePath = path;
             newSession.HasPath = true;
@@ -39,6 +41,8 @@ namespace NotepadPlus
         }
         
         private RichTextBox _textArea;
+        private FontDialog _fontDialog;
+        private ColorDialog _colorDialog;
 
         /// <summary>
         /// Свойство показывает, существует ли
@@ -62,7 +66,11 @@ namespace NotepadPlus
         /// Формат файла.
         /// </summary>
         public FileType Type { get; private set; }
-
+        
+        /// <summary>
+        /// Обертка для величины масштабирования
+        /// текста в RichTextBox.
+        /// </summary>
         public float ZoomFactor
         {
             get => _textArea.ZoomFactor;
@@ -72,17 +80,29 @@ namespace NotepadPlus
                 _textArea.ZoomFactor = value;
             }
         }
+        
+        /// <summary>
+        /// Контекстное меню, которое вызывается
+        /// с помощью ПКМ.
+        /// </summary>
+        public FormatContextMenu ContextMenu { get; }
 
 
         public Session(string title, FileType type) : base(title)
         {
             _textArea = new RichTextBox {Dock = DockStyle.Fill};
+            _fontDialog = new FontDialog();
+            _colorDialog = new ColorDialog();
+
             SetupTextArea();
+            
             Controls.Add(_textArea);
+            
             Type = type;
             HasPath = false;
             Saved = true;
             FilePath = string.Empty;
+            ContextMenu = new FormatContextMenu(this);
         }
 
         private void SetupTextArea()
@@ -91,28 +111,8 @@ namespace NotepadPlus
             _textArea.BorderStyle = BorderStyle.None;
             _textArea.SelectionChanged += OnSelectionChange;
             _textArea.TextChanged += OnTextChange;
-            _textArea.FontChanged += OnFontChange;
-            _textArea.ForeColorChanged += OnForeColorChange;
-        }
+            _textArea.ContextMenuStrip = ContextMenu;
 
-        private void OnForeColorChange(object sender, EventArgs e)
-        {
-            if (Type == FileType.RichText) Saved = false;
-        }
-
-        private void OnFontChange(object sender, EventArgs e)
-        {
-            if (Type == FileType.RichText) Saved = false;
-        }
-
-        private void OnSelectionChange(object sender, EventArgs e)
-        {
-            MakeUnsaved();
-        }
-
-        private void OnTextChange(object sender, EventArgs e)
-        {
-            MakeUnsaved();
         }
 
         public void WriteChangesToFile()
@@ -165,7 +165,7 @@ namespace NotepadPlus
             }
             else if (Type == FileType.RichText)
             {
-                _textArea.Text = content;
+                _textArea.Rtf = content;
             }
         }
 

@@ -147,5 +147,10 @@ namespace NotepadPlus
                 }
             }
         }
+
+        private void OnTabSwitched(object? sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

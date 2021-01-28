@@ -22,9 +22,15 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d87eeb77-0f87-42d9-9212-f4f88602a0a9" name="Default Changelist" comment="Zoom In/Out">
+    <list default="true" id="d87eeb77-0f87-42d9-9212-f4f88602a0a9" name="Default Changelist" comment="Font &amp; Color changing (RTF)">
+      <change afterPath="$PROJECT_DIR$/NotepadPlus/FormatContextMenu.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NotepadPlus/SessionEventHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NotepadPlus/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NotepadPlus/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NotepadPlus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NotepadPlus/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/MainFrame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/MainFrame.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NotepadPlus/MainFrameEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/MainFrameEventHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NotepadPlus/Session.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/Session.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/Utils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/Utils.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +43,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/NotepadPlus/Utils.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/FileType.cs" />
-        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.Designer.cs" />
-        <option value="$PROJECT_DIR$/NotepadPlus/MainFrameEventHandler.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/Utils.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/FormatContextMenu.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/Session.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/SessionEventHandler.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/MainFrameEventHandler.cs" />
       </list>
     </option>
   </component>
@@ -89,7 +97,7 @@
       <workItem from="1611757441397" duration="948000" />
       <workItem from="1611766109742" duration="4395000" />
       <workItem from="1611834442122" duration="3455000" />
-      <workItem from="1611842425331" duration="2156000" />
+      <workItem from="1611842425331" duration="7437000" />
     </task>
     <task id="LOCAL-00001" summary="Created main frame">
       <created>1611767145283</created>
@@ -119,7 +127,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611844439337</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Font &amp; Color changing (RTF)">
+      <created>1611844930179</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1611844930179</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -145,25 +160,26 @@
     <MESSAGE value="File saving" />
     <MESSAGE value="Creating and opening files" />
     <MESSAGE value="Zoom In/Out" />
-    <option name="LAST_COMMIT_MESSAGE" value="Zoom In/Out" />
+    <MESSAGE value="Font &amp; Color changing (RTF)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Font &amp; Color changing (RTF)" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1236" height="186" key="GridCell.Tab.0.bottom" timestamp="1611844412936">
+    <state width="1236" height="186" key="GridCell.Tab.0.bottom" timestamp="1611849840187">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="186" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1611844412936" />
-    <state width="1236" height="186" key="GridCell.Tab.0.center" timestamp="1611844412932">
+    <state width="1236" height="186" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1611849840187" />
+    <state width="1236" height="186" key="GridCell.Tab.0.center" timestamp="1611849840187">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="186" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1611844412932" />
-    <state width="1236" height="186" key="GridCell.Tab.0.left" timestamp="1611844412931">
+    <state width="1236" height="186" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1611849840187" />
+    <state width="1236" height="186" key="GridCell.Tab.0.left" timestamp="1611849840186">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="186" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1611844412931" />
-    <state width="1236" height="186" key="GridCell.Tab.0.right" timestamp="1611844412933">
+    <state width="1236" height="186" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1611849840186" />
+    <state width="1236" height="186" key="GridCell.Tab.0.right" timestamp="1611849840187">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="186" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1611844412933" />
+    <state width="1236" height="186" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1611849840187" />
     <state width="1236" height="258" key="GridCell.Tab.1.bottom" timestamp="1611843968953">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -228,9 +244,9 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state width="1236" height="258" key="GridCell.Tab.4.right/0.0.1280.720@0.0.1280.720" timestamp="1611843968955" />
-    <state x="233" y="80" key="Vcs.Push.Dialog.v2" timestamp="1611844441900">
+    <state x="233" y="80" key="Vcs.Push.Dialog.v2" timestamp="1611844932664">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="233" y="80" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1611844441900" />
+    <state x="233" y="80" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1611844932664" />
   </component>
 </project>

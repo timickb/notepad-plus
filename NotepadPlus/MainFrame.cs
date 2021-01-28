@@ -13,12 +13,14 @@ namespace NotepadPlus
             InitializeComponent();
 
             Closing += OnApplicationExit;
+            TabIndexChanged += OnTabSwitched;
 
             // При запуске программы автоматически создается новый файл.
             tabControl.Controls.Add(new Session("New file", FileType.PlainText));
 
             _fontDialog = new FontDialog();
             _colorDialog = new ColorDialog();
+            
         }
 
         public DialogResult OpenDialogForUnsavedFile(Session s)
