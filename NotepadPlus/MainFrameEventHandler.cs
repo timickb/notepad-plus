@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel;
+using System.IO;
 using System.Windows.Forms;
 
 namespace NotepadPlus
@@ -12,17 +14,34 @@ namespace NotepadPlus
 
         private void OnCreateFile(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            // TODO: меню выбора формата файла.
         }
 
         private void OnCreateFileRtf(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            tabControl.Controls.Add(new Session("New file (RTF)", FileType.RichText));
+        }
+        
+        private void OnCreateFileText(object sender, EventArgs e)
+        {
+            tabControl.Controls.Add(new Session("New file", FileType.PlainText));
         }
 
         private void OnOpenFile(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            using OpenFileDialog openFileDialog = new OpenFileDialog
+            {
+                InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),
+                Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*",
+                FilterIndex = 2,
+                RestoreDirectory = true
+            };
+
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                Session s = Session.LoadFile(openFileDialog.OpenFile(), openFileDialog.FileName);
+                tabControl.Controls.Add(s);
+            }
         }
 
         private void OnSaveFile(object sender, EventArgs e)
@@ -95,15 +114,24 @@ namespace NotepadPlus
             throw new NotImplementedException();
         }
 
-        private void OnApplicationExit(object sender, EventArgs e)
+        private void OnApplicationExit(object sender, CancelEventArgs e)
         {
             // Проверим наличие несохраненных вкладок.
             foreach (Session s in tabControl.Controls)
             {
                 if (!s.Saved)
                 {
+                    DialogResult result = OpenDialogForUnsavedFile(s);
+                    
+                    // Если пользователь нажал "отмена" в ответ на
+                    // предложение сохранить файл - отменяем закрытие программы.
+                    if (result == DialogResult.Cancel)
+                    {
+                        e.Cancel = true;
+                    }
                 }
             }
         }
+        
     }
 }

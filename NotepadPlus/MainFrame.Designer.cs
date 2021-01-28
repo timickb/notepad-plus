@@ -106,13 +106,14 @@ namespace NotepadPlus
             this.fileMenuItemCreatePlaintext.Name = "fileMenuItemCreatePlaintext";
             this.fileMenuItemCreatePlaintext.Size = new System.Drawing.Size(280, 34);
             this.fileMenuItemCreatePlaintext.Text = "Текстовый файл";
-            this.fileMenuItemCreatePlaintext.Click += new System.EventHandler(this.OnCreateFileRtf);
+            this.fileMenuItemCreatePlaintext.Click += new System.EventHandler(this.OnCreateFileText);
             // 
             // fileMenuItemCreateRtf
             // 
             this.fileMenuItemCreateRtf.Name = "fileMenuItemCreateRtf";
             this.fileMenuItemCreateRtf.Size = new System.Drawing.Size(280, 34);
             this.fileMenuItemCreateRtf.Text = "Файл в формате RTF";
+            this.fileMenuItemCreateRtf.Click += new System.EventHandler(this.OnCreateFileRtf);
             // 
             // fileMenuItemOpen
             // 

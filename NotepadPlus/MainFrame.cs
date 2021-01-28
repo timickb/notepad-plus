@@ -55,5 +55,6 @@ namespace NotepadPlus
         {
             return (Session) tabControl.Controls[tabControl.SelectedIndex];
         }
+        
     }
 }

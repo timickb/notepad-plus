@@ -22,14 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d87eeb77-0f87-42d9-9212-f4f88602a0a9" name="Default Changelist" comment="Created main frame">
-      <change afterPath="$PROJECT_DIR$/NotepadPlus/FileType.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/NotepadPlus/Utils.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NotepadPlus/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NotepadPlus/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="d87eeb77-0f87-42d9-9212-f4f88602a0a9" name="Default Changelist" comment="File saving">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NotepadPlus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NotepadPlus/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/MainFrame.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/MainFrame.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NotepadPlus/MainFrame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/MainFrame.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NotepadPlus/MainFrameEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/MainFrameEventHandler.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NotepadPlus/Session.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/Session.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/Utils.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/Utils.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +41,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.Designer.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/Utils.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/FileType.cs" />
-        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.cs" />
-        <option value="$PROJECT_DIR$/NotepadPlus/MainFrameEventHandler.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/Session.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.Designer.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/MainFrameEventHandler.cs" />
       </list>
     </option>
   </component>
@@ -91,7 +90,8 @@
       <updated>1611757406880</updated>
       <workItem from="1611757441397" duration="948000" />
       <workItem from="1611766109742" duration="4395000" />
-      <workItem from="1611834442122" duration="3094000" />
+      <workItem from="1611834442122" duration="3455000" />
+      <workItem from="1611842425331" duration="1122000" />
     </task>
     <task id="LOCAL-00001" summary="Created main frame">
       <created>1611767145283</created>
@@ -100,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611767145283</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="File saving">
+      <created>1611841853510</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1611841853510</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,28 +130,29 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Created main frame" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created main frame" />
+    <MESSAGE value="File saving" />
+    <option name="LAST_COMMIT_MESSAGE" value="File saving" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1236" height="186" key="GridCell.Tab.0.bottom" timestamp="1611777225189">
+    <state width="1236" height="186" key="GridCell.Tab.0.bottom" timestamp="1611843399410">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="186" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1611777225189" />
-    <state width="1236" height="186" key="GridCell.Tab.0.center" timestamp="1611777225189">
+    <state width="1236" height="186" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1611843399410" />
+    <state width="1236" height="186" key="GridCell.Tab.0.center" timestamp="1611843399409">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="186" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1611777225189" />
-    <state width="1236" height="186" key="GridCell.Tab.0.left" timestamp="1611777225189">
+    <state width="1236" height="186" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1611843399409" />
+    <state width="1236" height="186" key="GridCell.Tab.0.left" timestamp="1611843399407">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="186" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1611777225189" />
-    <state width="1236" height="186" key="GridCell.Tab.0.right" timestamp="1611777225189">
+    <state width="1236" height="186" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1611843399407" />
+    <state width="1236" height="186" key="GridCell.Tab.0.right" timestamp="1611843399410">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="186" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1611777225189" />
-    <state x="233" y="80" key="Vcs.Push.Dialog.v2" timestamp="1611774991793">
+    <state width="1236" height="186" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1611843399410" />
+    <state x="233" y="80" key="Vcs.Push.Dialog.v2" timestamp="1611841857097">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="233" y="80" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1611774991793" />
+    <state x="233" y="80" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1611841857097" />
   </component>
 </project>

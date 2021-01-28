@@ -13,6 +13,30 @@ namespace NotepadPlus
     /// </summary>
     public class Session : TabPage
     {
+        /// <summary>
+        /// Способ создания сессии путем загрузки
+        /// существующего файла из файловой системы.
+        /// </summary>
+        /// <param name="stream">Stream.</param>
+        /// <param name="path">Полный путь к файлу на диске.</param>
+        /// <returns></returns>
+        public static Session LoadFile(Stream stream, string path)
+        {
+            StreamReader sr = new StreamReader(stream);
+
+            path = Path.GetFullPath(path);
+            
+            Session newSession = new Session(path, Utils.DetermineFileType(sr, path));
+            newSession.SetContent(sr.ReadToEnd());
+            newSession.FilePath = path;
+            newSession.HasPath = true;
+            newSession.Saved = true;
+
+            sr.Close();
+
+            return newSession;
+        }
+        
         private RichTextBox _textArea;
 
         /// <summary>
@@ -122,6 +146,18 @@ namespace NotepadPlus
             return _textArea.Rtf;
         }
 
+        public void SetContent(string content)
+        {
+            if (Type == FileType.PlainText)
+            {
+                _textArea.Text = content;
+            }
+            else if (Type == FileType.RichText)
+            {
+                _textArea.Text = content;
+            }
+        }
+
         public string GetTextContent()
         {
             return _textArea.Text;
@@ -139,5 +175,6 @@ namespace NotepadPlus
             Saved = false;
             Text = Path.GetFileName(FilePath) + " *";
         }
+        
     }
 }
