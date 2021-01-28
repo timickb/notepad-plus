@@ -21,7 +21,7 @@ namespace NotepadPlus
         {
             tabControl.Controls.Add(new Session("New file (RTF)", FileType.RichText));
         }
-        
+
         private void OnCreateFileText(object sender, EventArgs e)
         {
             tabControl.Controls.Add(new Session("New file", FileType.PlainText));
@@ -91,17 +91,23 @@ namespace NotepadPlus
 
         private void OnExitMenuItemClick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            OnApplicationExit(sender, (CancelEventArgs) e);
         }
 
         private void OnZoomInClick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            foreach (Session s in tabControl.Controls)
+            {
+                s.ZoomFactor = (float) (s.ZoomFactor + 0.2);
+            }
         }
 
         private void OnZoomOutClick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            foreach (Session s in tabControl.Controls)
+            {
+                s.ZoomFactor = (float) (s.ZoomFactor - 0.2);
+            }
         }
 
         private void OnZoomResetClick(object sender, EventArgs e)
@@ -122,7 +128,7 @@ namespace NotepadPlus
                 if (!s.Saved)
                 {
                     DialogResult result = OpenDialogForUnsavedFile(s);
-                    
+
                     // Если пользователь нажал "отмена" в ответ на
                     // предложение сохранить файл - отменяем закрытие программы.
                     if (result == DialogResult.Cancel)
@@ -132,6 +138,5 @@ namespace NotepadPlus
                 }
             }
         }
-        
     }
 }

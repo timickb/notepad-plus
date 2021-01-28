@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
@@ -61,6 +62,16 @@ namespace NotepadPlus
         /// Формат файла.
         /// </summary>
         public FileType Type { get; private set; }
+
+        public float ZoomFactor
+        {
+            get => _textArea.ZoomFactor;
+            set
+            {
+                if (value <= 0.1 || value >= 10) return;
+                _textArea.ZoomFactor = value;
+            }
+        }
 
 
         public Session(string title, FileType type) : base(title)
@@ -168,6 +179,7 @@ namespace NotepadPlus
             Saved = true;
             HasPath = true;
             Text = Path.GetFileName(FilePath);
+            if (Type == FileType.PlainText) ForeColor = Color.CornflowerBlue;
         }
 
         private void MakeUnsaved()
