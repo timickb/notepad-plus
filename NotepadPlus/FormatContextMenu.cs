@@ -4,12 +4,12 @@ namespace NotepadPlus
 {
     public sealed class FormatContextMenu : ContextMenuStrip
     {
-        private ToolStripMenuItem copyMenuItem;
-        private ToolStripMenuItem pasteMenuItem;
-        private ToolStripMenuItem selectAllMenuItem;
-        private ToolStripMenuItem cutMenuItem;
-        private ToolStripMenuItem fontChangeMenuItem;
-        private ToolStripMenuItem colorChangeMenuItem;
+        private readonly ToolStripMenuItem _copyMenuItem;
+        private readonly ToolStripMenuItem _pasteMenuItem;
+        private readonly ToolStripMenuItem _selectAllMenuItem;
+        private readonly ToolStripMenuItem _cutMenuItem;
+        private readonly ToolStripMenuItem _fontChangeMenuItem;
+        private readonly ToolStripMenuItem _colorChangeMenuItem;
 
         /// <summary>
         /// Контекстному меню необходима информация о том,
@@ -22,41 +22,59 @@ namespace NotepadPlus
         {
             _session = s;
 
-            copyMenuItem = new ToolStripMenuItem("Копировать");
-            pasteMenuItem = new ToolStripMenuItem("Вставить");
-            selectAllMenuItem = new ToolStripMenuItem("Выделить все");
-            cutMenuItem = new ToolStripMenuItem("Вырезать");
-            fontChangeMenuItem = new ToolStripMenuItem("Изменить шрифт");
-            colorChangeMenuItem = new ToolStripMenuItem("Изменить цвет текста");
+            _copyMenuItem = new ToolStripMenuItem("Копировать");
+            _pasteMenuItem = new ToolStripMenuItem("Вставить");
+            _selectAllMenuItem = new ToolStripMenuItem("Выделить все");
+            _cutMenuItem = new ToolStripMenuItem("Вырезать");
+            _fontChangeMenuItem = new ToolStripMenuItem("Изменить шрифт");
+            _colorChangeMenuItem = new ToolStripMenuItem("Изменить цвет текста");
             
 
-            copyMenuItem.ShortcutKeys = Keys.Control | Keys.C;
-            pasteMenuItem.ShortcutKeys = Keys.Control | Keys.V;
-            cutMenuItem.ShortcutKeys = Keys.Control | Keys.X;
-            selectAllMenuItem.ShortcutKeys = Keys.Control | Keys.A;
-            fontChangeMenuItem.ShortcutKeys = Keys.Control | Keys.Shift | Keys.F;
-            colorChangeMenuItem.ShortcutKeys = Keys.Control | Keys.Shift | Keys.C;
+            _copyMenuItem.ShortcutKeys = Keys.Control | Keys.C;
+            _pasteMenuItem.ShortcutKeys = Keys.Control | Keys.V;
+            _cutMenuItem.ShortcutKeys = Keys.Control | Keys.X;
+            _selectAllMenuItem.ShortcutKeys = Keys.Control | Keys.A;
+            _fontChangeMenuItem.ShortcutKeys = Keys.Control | Keys.Shift | Keys.F;
+            _colorChangeMenuItem.ShortcutKeys = Keys.Control | Keys.Shift | Keys.C;
 
-            Items.Add(copyMenuItem);
-            Items.Add(pasteMenuItem);
-            Items.Add(selectAllMenuItem);
-            Items.Add(cutMenuItem);
-            Items.Add(fontChangeMenuItem);
-            Items.Add(colorChangeMenuItem);
+            Items.Add(_copyMenuItem);
+            Items.Add(_pasteMenuItem);
+            Items.Add(_selectAllMenuItem);
+            Items.Add(_cutMenuItem);
+            Items.Add(_fontChangeMenuItem);
+            Items.Add(_colorChangeMenuItem);
             
             if (s.Type == FileType.RichText)
             {
-                fontChangeMenuItem.Enabled = false;
-                colorChangeMenuItem.Enabled = false;
+                _fontChangeMenuItem.Enabled = false;
+                _colorChangeMenuItem.Enabled = false;
             }
 
-            copyMenuItem.Click += s.OnSelectionCopy;
-            pasteMenuItem.Click += s.OnBufferPaste;
-            selectAllMenuItem.Click += s.OnSelectedAll;
-            cutMenuItem.Click += s.OnCutSelection;
-            fontChangeMenuItem.Click += s.OnFontChange;
-            colorChangeMenuItem.Click += s.OnForeColorChange;
+            _copyMenuItem.Click += s.OnSelectionCopy;
+            _pasteMenuItem.Click += s.OnBufferPaste;
+            _selectAllMenuItem.Click += s.OnSelectedAll;
+            _cutMenuItem.Click += s.OnCutSelection;
+            _fontChangeMenuItem.Click += s.OnFontChange;
+            _colorChangeMenuItem.Click += s.OnForeColorChange;
 
+        }
+        
+        /// <summary>
+        /// Возвращает массив из пунктов меню для
+        /// использования его в dropdownFormatButton.
+        /// </summary>
+        /// <returns></returns>
+        public ToolStripItem[] GetRangeOfItems()
+        {
+            return new ToolStripItem[]
+            {
+                _copyMenuItem,
+                _pasteMenuItem,
+                _selectAllMenuItem,
+                _cutMenuItem,
+                _fontChangeMenuItem,
+                _colorChangeMenuItem
+            };
         }
     }
 }
