@@ -9,7 +9,7 @@ namespace NotepadPlus
     {
         private void OnAboutAppWindowOpen(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            // TODO: окно "О программе".
         }
 
         private void OnCreateFile(object sender, EventArgs e)
@@ -81,12 +81,18 @@ namespace NotepadPlus
 
         private void OnFontChangeMenuItemClick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (_fontDialog.ShowDialog() == DialogResult.OK)
+            {
+                GetCurrentTab().SetSelectionFont(_fontDialog.Font);
+            }
         }
 
         private void OnColorChangeMenuItemClick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (_colorDialog.ShowDialog() == DialogResult.OK)
+            {
+                GetCurrentTab().SetSelectionFont(_fontDialog.Font);
+            }
         }
 
         private void OnExitMenuItemClick(object sender, EventArgs e)
@@ -112,12 +118,15 @@ namespace NotepadPlus
 
         private void OnZoomResetClick(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            foreach (Session s in tabControl.Controls)
+            {
+                s.ZoomFactor = 1f;
+            }
         }
 
         private void OnSettingsOpen(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            // TODO: Форма с настройками.
         }
 
         private void OnApplicationExit(object sender, CancelEventArgs e)

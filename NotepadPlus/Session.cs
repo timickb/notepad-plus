@@ -187,6 +187,16 @@ namespace NotepadPlus
             Saved = false;
             Text = Path.GetFileName(FilePath) + " *";
         }
+
+        public void SetSelectionFont(Font f)
+        {
+            _textArea.SelectionFont = f;
+        }
+
+        public void SetSelectionColor(Font f)
+        {
+            _textArea.SelectionFont = f;
+        }
         
     }
 }
