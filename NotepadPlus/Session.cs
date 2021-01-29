@@ -14,6 +14,9 @@ namespace NotepadPlus
     /// </summary>
     public partial class Session : TabPage
     {
+
+        public const string UnsavedFileMark = "*";
+        
         /// <summary>
         /// Способ создания сессии путем загрузки
         /// существующего файла из файловой системы.
@@ -93,16 +96,15 @@ namespace NotepadPlus
             _textArea = new RichTextBox {Dock = DockStyle.Fill};
             _fontDialog = new FontDialog();
             _colorDialog = new ColorDialog();
-
-            SetupTextArea();
-            
-            Controls.Add(_textArea);
             
             Type = type;
             HasPath = false;
             Saved = true;
-            FilePath = string.Empty;
+            FilePath = title;
             ContextMenu = new FormatContextMenu(this);
+            
+            SetupTextArea();
+            Controls.Add(_textArea);
         }
 
         private void SetupTextArea()
@@ -111,6 +113,12 @@ namespace NotepadPlus
             _textArea.BorderStyle = BorderStyle.None;
             _textArea.SelectionChanged += OnSelectionChange;
             _textArea.TextChanged += OnTextChange;
+            
+            /*ContextMenuStrip rightClickMenu = new ContextMenuStrip();
+            ToolStripMenuItem copyItem = ContextMenu.CopyMenuItem;
+            rightClickMenu.Items.Add(copyItem);
+            _textArea.ContextMenuStrip = rightClickMenu;*/
+
             _textArea.ContextMenuStrip = ContextMenu;
 
         }
@@ -152,11 +160,6 @@ namespace NotepadPlus
             MakeSaved();
         }
 
-        public string GetRtfContent()
-        {
-            return _textArea.Rtf;
-        }
-
         public void SetContent(string content)
         {
             if (Type == FileType.PlainText)
@@ -167,11 +170,6 @@ namespace NotepadPlus
             {
                 _textArea.Rtf = content;
             }
-        }
-
-        public string GetTextContent()
-        {
-            return _textArea.Text;
         }
 
         private void MakeSaved()
@@ -185,18 +183,8 @@ namespace NotepadPlus
         private void MakeUnsaved()
         {
             Saved = false;
-            Text = Path.GetFileName(FilePath) + " *";
+            Text = $@"{Path.GetFileName(FilePath)} {UnsavedFileMark}";
         }
 
-        public void SetSelectionFont(Font f)
-        {
-            _textArea.SelectionFont = f;
-        }
-
-        public void SetSelectionColor(Font f)
-        {
-            _textArea.SelectionFont = f;
-        }
-        
     }
 }

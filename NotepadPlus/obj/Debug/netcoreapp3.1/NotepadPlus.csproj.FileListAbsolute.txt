@@ -1,0 +1,16 @@
+D:\SharpTasks\NotepadPlus\NotepadPlus\bin\Debug\netcoreapp3.1\NotepadPlus.exe
+D:\SharpTasks\NotepadPlus\NotepadPlus\bin\Debug\netcoreapp3.1\NotepadPlus.deps.json
+D:\SharpTasks\NotepadPlus\NotepadPlus\bin\Debug\netcoreapp3.1\NotepadPlus.runtimeconfig.json
+D:\SharpTasks\NotepadPlus\NotepadPlus\bin\Debug\netcoreapp3.1\NotepadPlus.runtimeconfig.dev.json
+D:\SharpTasks\NotepadPlus\NotepadPlus\bin\Debug\netcoreapp3.1\NotepadPlus.dll
+D:\SharpTasks\NotepadPlus\NotepadPlus\bin\Debug\netcoreapp3.1\NotepadPlus.pdb
+D:\SharpTasks\NotepadPlus\NotepadPlus\obj\Debug\netcoreapp3.1\NotepadPlus.csprojAssemblyReference.cache
+D:\SharpTasks\NotepadPlus\NotepadPlus\obj\Debug\netcoreapp3.1\NotepadPlus.MainFrame.resources
+D:\SharpTasks\NotepadPlus\NotepadPlus\obj\Debug\netcoreapp3.1\NotepadPlus.csproj.GenerateResource.cache
+D:\SharpTasks\NotepadPlus\NotepadPlus\obj\Debug\netcoreapp3.1\NotepadPlus.AssemblyInfoInputs.cache
+D:\SharpTasks\NotepadPlus\NotepadPlus\obj\Debug\netcoreapp3.1\NotepadPlus.AssemblyInfo.cs
+D:\SharpTasks\NotepadPlus\NotepadPlus\obj\Debug\netcoreapp3.1\NotepadPlus.csproj.CoreCompileInputs.cache
+D:\SharpTasks\NotepadPlus\NotepadPlus\obj\Debug\netcoreapp3.1\NotepadPlus.dll
+D:\SharpTasks\NotepadPlus\NotepadPlus\obj\Debug\netcoreapp3.1\NotepadPlus.pdb
+D:\SharpTasks\NotepadPlus\NotepadPlus\obj\Debug\netcoreapp3.1\NotepadPlus.genruntimeconfig.cache
+D:\SharpTasks\NotepadPlus\NotepadPlus\obj\Debug\netcoreapp3.1\NotepadPlus.SettingsFrame.resources

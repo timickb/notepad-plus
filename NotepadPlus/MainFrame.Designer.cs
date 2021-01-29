@@ -43,8 +43,6 @@ namespace NotepadPlus
             this.fileMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
             this.dropdownEditButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.dropdownFormatButton = new System.Windows.Forms.ToolStripDropDownButton();
-            this.formatMenuItemChangeFont = new System.Windows.Forms.ToolStripMenuItem();
-            this.formatMenuItemChangeColor = new System.Windows.Forms.ToolStripMenuItem();
             this.dropdownSettingsButton = new System.Windows.Forms.ToolStripDropDownButton();
             this.zoomInMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zoomOutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -172,29 +170,9 @@ namespace NotepadPlus
             // dropdownFormatButton
             // 
             this.dropdownFormatButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.dropdownFormatButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.formatMenuItemChangeFont,
-            this.formatMenuItemChangeColor});
-            this.dropdownFormatButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.dropdownFormatButton.Name = "dropdownFormatButton";
             this.dropdownFormatButton.Size = new System.Drawing.Size(94, 29);
             this.dropdownFormatButton.Text = "Формат";
-            // 
-            // formatMenuItemChangeFont
-            // 
-            this.formatMenuItemChangeFont.Name = "formatMenuItemChangeFont";
-            this.formatMenuItemChangeFont.Size = new System.Drawing.Size(385, 34);
-            this.formatMenuItemChangeFont.Text = "Изменить шрифт";
-            this.formatMenuItemChangeFont.Click += new System.EventHandler(this.OnFontChangeMenuItemClick);
-            // 
-            // formatMenuItemChangeColor
-            // 
-            this.formatMenuItemChangeColor.Name = "formatMenuItemChangeColor";
-            this.formatMenuItemChangeColor.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
-            | System.Windows.Forms.Keys.C)));
-            this.formatMenuItemChangeColor.Size = new System.Drawing.Size(385, 34);
-            this.formatMenuItemChangeColor.Text = "Изменить цвет текста";
-            this.formatMenuItemChangeColor.Click += new System.EventHandler(this.OnColorChangeMenuItemClick);
             // 
             // dropdownSettingsButton
             // 
@@ -296,9 +274,6 @@ namespace NotepadPlus
 
         private System.Windows.Forms.ToolStripMenuItem fileMenuItemCreatePlaintext;
         private System.Windows.Forms.ToolStripMenuItem fileMenuItemCreateRtf;
-
-        private System.Windows.Forms.ToolStripMenuItem formatMenuItemChangeColor;
-        private System.Windows.Forms.ToolStripMenuItem formatMenuItemChangeFont;
 
         private System.Windows.Forms.ToolStripMenuItem fileMenuItemClose;
 

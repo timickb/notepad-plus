@@ -56,7 +56,7 @@ namespace NotepadPlus
 
         private void OnSelectionChange(object sender, EventArgs e)
         {
-            MakeUnsaved();
+            if(Type == FileType.RichText) MakeUnsaved();
         }
 
         private void OnTextChange(object sender, EventArgs e)

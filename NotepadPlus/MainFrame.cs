@@ -5,22 +5,16 @@ namespace NotepadPlus
 {
     public partial class MainFrame : Form
     {
-        private FontDialog _fontDialog;
-        private ColorDialog _colorDialog;
-
         public MainFrame()
         {
             InitializeComponent();
 
             Closing += OnApplicationExit;
-            TabIndexChanged += OnTabSwitched;
-
-            // При запуске программы автоматически создается новый файл.
-            tabControl.Controls.Add(new Session("New file", FileType.PlainText));
-
-            _fontDialog = new FontDialog();
-            _colorDialog = new ColorDialog();
+            tabControl.SelectedIndexChanged += OnTabSwitched;
             
+            fileMenuItemCreatePlaintext.PerformClick();
+            dropdownFormatButton.DropDownItems.AddRange(GetCurrentTab().ContextMenu.GetRangeOfItems());
+
         }
 
         public DialogResult OpenDialogForUnsavedFile(Session s)

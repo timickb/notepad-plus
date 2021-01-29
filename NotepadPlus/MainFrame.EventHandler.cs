@@ -77,22 +77,8 @@ namespace NotepadPlus
             {
                 tabControl.Controls.Remove(s);
             }
-        }
 
-        private void OnFontChangeMenuItemClick(object sender, EventArgs e)
-        {
-            if (_fontDialog.ShowDialog() == DialogResult.OK)
-            {
-                GetCurrentTab().SetSelectionFont(_fontDialog.Font);
-            }
-        }
-
-        private void OnColorChangeMenuItemClick(object sender, EventArgs e)
-        {
-            if (_colorDialog.ShowDialog() == DialogResult.OK)
-            {
-                GetCurrentTab().SetSelectionFont(_fontDialog.Font);
-            }
+            if (tabControl.Controls.Count == 0) Application.Exit();
         }
 
         private void OnExitMenuItemClick(object sender, EventArgs e)
@@ -126,7 +112,13 @@ namespace NotepadPlus
 
         private void OnSettingsOpen(object sender, EventArgs e)
         {
-            // TODO: Форма с настройками.
+            SettingsFrame settingsForm = new SettingsFrame();
+
+            if (settingsForm.ShowDialog(this) == DialogResult.OK)
+            {
+                // nothing to do.
+            }
+            settingsForm.Dispose();
         }
 
         private void OnApplicationExit(object sender, CancelEventArgs e)
@@ -148,9 +140,14 @@ namespace NotepadPlus
             }
         }
 
-        private void OnTabSwitched(object? sender, EventArgs e)
+        private void OnTabSwitched(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            if (tabControl.Controls.Count <= 1) return;
+            
+            // Когда пользователь переключает вкладку, необходимо
+            // сменить контекстное меню на актуальное.
+            dropdownFormatButton.DropDownItems.Clear();
+            dropdownFormatButton.DropDownItems.AddRange(GetCurrentTab().ContextMenu.GetRangeOfItems());
         }
     }
 }
