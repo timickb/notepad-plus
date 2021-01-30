@@ -1,15 +1,16 @@
 ﻿using System.Windows.Forms;
+using NotepadPlus.UI;
 
 namespace NotepadPlus
 {
     public sealed class FormatContextMenu : ContextMenuStrip
     {
-        private readonly ToolStripMenuItem _copyMenuItem;
-        private readonly ToolStripMenuItem _pasteMenuItem;
-        private readonly ToolStripMenuItem _selectAllMenuItem;
-        private readonly ToolStripMenuItem _cutMenuItem;
-        private readonly ToolStripMenuItem _fontChangeMenuItem;
-        private readonly ToolStripMenuItem _colorChangeMenuItem;
+        private readonly NToolStripMenuItem _copyMenuItem;
+        private readonly NToolStripMenuItem _pasteMenuItem;
+        private readonly NToolStripMenuItem _selectAllMenuItem;
+        private readonly NToolStripMenuItem _cutMenuItem;
+        private readonly NToolStripMenuItem _fontChangeMenuItem;
+        private readonly NToolStripMenuItem _colorChangeMenuItem;
 
         /// <summary>
         /// Контекстному меню необходима информация о том,
@@ -22,12 +23,12 @@ namespace NotepadPlus
         {
             _session = s;
 
-            _copyMenuItem = new ToolStripMenuItem("Копировать");
-            _pasteMenuItem = new ToolStripMenuItem("Вставить");
-            _selectAllMenuItem = new ToolStripMenuItem("Выделить все");
-            _cutMenuItem = new ToolStripMenuItem("Вырезать");
-            _fontChangeMenuItem = new ToolStripMenuItem("Изменить шрифт");
-            _colorChangeMenuItem = new ToolStripMenuItem("Изменить цвет текста");
+            _copyMenuItem = new NToolStripMenuItem("Копировать");
+            _pasteMenuItem = new NToolStripMenuItem("Вставить");
+            _selectAllMenuItem = new NToolStripMenuItem("Выделить все");
+            _cutMenuItem = new NToolStripMenuItem("Вырезать");
+            _fontChangeMenuItem = new NToolStripMenuItem("Изменить шрифт");
+            _colorChangeMenuItem = new NToolStripMenuItem("Изменить цвет текста");
             
 
             _copyMenuItem.ShortcutKeys = Keys.Control | Keys.C;
@@ -69,12 +70,12 @@ namespace NotepadPlus
             // KOSTYL: пришлось создавать копии пунктов меню (дублирование
             // огромного куска кода из конструктора выше). Оправадание:
             // торопился к дедлайну,а передача их по ссылке не работала правильно.
-            ToolStripMenuItem copyMenuItem = new ToolStripMenuItem(_copyMenuItem.Text);
-            ToolStripMenuItem pasteMenuItem = new ToolStripMenuItem(_pasteMenuItem.Text);
-            ToolStripMenuItem selectAllMenuItem = new ToolStripMenuItem(_selectAllMenuItem.Text);
-            ToolStripMenuItem cutMenuItem = new ToolStripMenuItem(_cutMenuItem.Text);
-            ToolStripMenuItem colorChangeMenuItem = new ToolStripMenuItem(_colorChangeMenuItem.Text);
-            ToolStripMenuItem fontChangeMenuItem = new ToolStripMenuItem(_fontChangeMenuItem.Text);
+            NToolStripMenuItem copyMenuItem = new NToolStripMenuItem(_copyMenuItem.Text);
+            NToolStripMenuItem pasteMenuItem = new NToolStripMenuItem(_pasteMenuItem.Text);
+            NToolStripMenuItem selectAllMenuItem = new NToolStripMenuItem(_selectAllMenuItem.Text);
+            NToolStripMenuItem cutMenuItem = new NToolStripMenuItem(_cutMenuItem.Text);
+            NToolStripMenuItem colorChangeMenuItem = new NToolStripMenuItem(_colorChangeMenuItem.Text);
+            NToolStripMenuItem fontChangeMenuItem = new NToolStripMenuItem(_fontChangeMenuItem.Text);
             
             copyMenuItem.Click += _session.OnSelectionCopy;
             pasteMenuItem.Click += _session.OnBufferPaste;
