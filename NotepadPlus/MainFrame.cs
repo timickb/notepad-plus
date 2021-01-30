@@ -1,5 +1,7 @@
-﻿using System.IO;
+﻿using System.Configuration;
+using System.IO;
 using System.Windows.Forms;
+using NotepadPlus.UI;
 
 namespace NotepadPlus
 {
@@ -11,10 +13,42 @@ namespace NotepadPlus
 
             Closing += OnApplicationExit;
             tabControl.SelectedIndexChanged += OnTabSwitched;
-            
+
             fileMenuItemCreatePlaintext.PerformClick();
             dropdownFormatButton.DropDownItems.AddRange(GetCurrentTab().ContextMenu.GetRangeOfItems());
 
+            SetApplicationUITheme(UITheme.Dark);
+        }
+
+        public void SetApplicationUITheme(UITheme theme)
+        {
+            this.mainMenu.SetTheme(theme);
+            this.dropdownFileButton.SetTheme(theme);
+            this.fileMenuItemCreate.SetTheme(theme);
+            this.fileMenuItemCreatePlaintext.SetTheme(theme);
+            this.fileMenuItemCreateRtf.SetTheme(theme);
+            this.fileMenuItemOpen.SetTheme(theme);
+            this.fileMenuItemSave.SetTheme(theme);
+            this.fileMenuItemSaveAs.SetTheme(theme);
+            this.toolStripSeparator2.SetTheme(theme);
+            this.fileMenuItemClose.SetTheme(theme);
+            this.fileMenuItemExit.SetTheme(theme);
+            this.dropdownEditButton.SetTheme(theme);
+            this.dropdownFormatButton.SetTheme(theme);
+            this.dropdownSettingsButton.SetTheme(theme);
+            this.zoomInMenuItem.SetTheme(theme);
+            this.zoomOutMenuItem.SetTheme(theme);
+            this.zoomResetMenuItem.SetTheme(theme);
+            this.toolStripSeparator1.SetTheme(theme);
+            this.editorSettingsMenuItem.SetTheme(theme);
+            this.dropdownInfoButton.SetTheme(theme);
+            this.infoMenuItemAbout.SetTheme(theme);
+            this.tabControl.SetTheme(theme);
+            
+            foreach(Session s in tabControl.Controls)
+            {
+                s.SetTheme(theme);
+            }
         }
 
         public DialogResult OpenDialogForUnsavedFile(Session s)
@@ -46,11 +80,10 @@ namespace NotepadPlus
                 }
             }
         }
-        
+
         public Session GetCurrentTab()
         {
             return (Session) tabControl.Controls[tabControl.SelectedIndex];
         }
-        
     }
 }

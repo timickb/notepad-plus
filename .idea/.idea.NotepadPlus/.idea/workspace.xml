@@ -22,7 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d87eeb77-0f87-42d9-9212-f4f88602a0a9" name="Default Changelist" comment="Fixed new file unsaved mark bug">
+    <list default="true" id="d87eeb77-0f87-42d9-9212-f4f88602a0a9" name="Default Changelist" comment="UI Classes">
       <change beforePath="$PROJECT_DIR$/NotepadPlus/FormatContextMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/FormatContextMenu.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,14 +40,24 @@
         <option value="$PROJECT_DIR$/NotepadPlus/Utils.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/SessionEventHandler.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/MainFrameEventHandler.cs" />
-        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.Designer.cs" />
-        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.cs" />
-        <option value="$PROJECT_DIR$/NotepadPlus/FormatContextMenu.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/SettingsFrame.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/SettingsFrame.Designer.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/Session.EventHandler.cs" />
-        <option value="$PROJECT_DIR$/NotepadPlus/Session.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.EventHandler.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/appsettings.json" />
+        <option value="$PROJECT_DIR$/NotepadPlus/UI/NToolStripDropdownButton.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/UI/NToolStripDropDownItem.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.Designer.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/FormatContextMenu.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/UI/UITheme.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/UI/NToolStripMenuItem.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/UI/NToolStripItem.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/UI/NToolStripSeparator.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/UI/NTabControl.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/UI/NToolStrip.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/UI/NToolStripDropDownButton.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/Session.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.cs" />
       </list>
     </option>
   </component>
@@ -94,7 +104,7 @@
       <workItem from="1611757441397" duration="948000" />
       <workItem from="1611766109742" duration="4395000" />
       <workItem from="1611834442122" duration="3455000" />
-      <workItem from="1611842425331" duration="20777000" />
+      <workItem from="1611842425331" duration="27777000" />
     </task>
     <task id="LOCAL-00001" summary="Created main frame">
       <created>1611767145283</created>
@@ -152,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611957306895</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="UI Classes">
+      <created>1612015120385</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1612015120386</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,25 +200,27 @@
     <MESSAGE value="Context menu features done" />
     <MESSAGE value="Settings Form" />
     <MESSAGE value="Fixed new file unsaved mark bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed new file unsaved mark bug" />
+    <MESSAGE value="Fixes" />
+    <MESSAGE value="UI Classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI Classes" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1236" height="186" key="GridCell.Tab.0.bottom" timestamp="1611957752568">
+    <state width="1236" height="186" key="GridCell.Tab.0.bottom" timestamp="1612018840986">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="186" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1611957752568" />
-    <state width="1236" height="186" key="GridCell.Tab.0.center" timestamp="1611957752567">
+    <state width="1236" height="186" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1612018840986" />
+    <state width="1236" height="186" key="GridCell.Tab.0.center" timestamp="1612018840986">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="186" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1611957752567" />
-    <state width="1236" height="186" key="GridCell.Tab.0.left" timestamp="1611957752567">
+    <state width="1236" height="186" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1612018840986" />
+    <state width="1236" height="186" key="GridCell.Tab.0.left" timestamp="1612018840985">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="186" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1611957752567" />
-    <state width="1236" height="186" key="GridCell.Tab.0.right" timestamp="1611957752567">
+    <state width="1236" height="186" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1612018840985" />
+    <state width="1236" height="186" key="GridCell.Tab.0.right" timestamp="1612018840986">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="186" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1611957752567" />
+    <state width="1236" height="186" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1612018840986" />
     <state width="1236" height="258" key="GridCell.Tab.1.bottom" timestamp="1611930365442">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -270,13 +289,17 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="271" y="19" key="ToolboxManager/0.0.1280.720@0.0.1280.720" timestamp="1611955875065" />
-    <state x="233" y="80" key="Vcs.Push.Dialog.v2" timestamp="1611957318092">
+    <state x="233" y="80" key="Vcs.Push.Dialog.v2" timestamp="1612015186479">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="233" y="80" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1611957318092" />
-    <state x="303" y="41" key="search.everywhere.popup" timestamp="1611957383818">
+    <state x="233" y="80" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1612015186479" />
+    <state x="0" y="0" width="642" height="720" key="find.popup" timestamp="1611960315992">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="303" y="41" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1611957383818" />
+    <state x="0" y="0" width="642" height="720" key="find.popup/0.0.1280.720@0.0.1280.720" timestamp="1611960315992" />
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup" timestamp="1611961347065">
+      <screen x="0" y="0" width="1280" height="720" />
+    </state>
+    <state x="303" y="41" width="672" height="678" key="search.everywhere.popup/0.0.1280.720@0.0.1280.720" timestamp="1611961347065" />
   </component>
 </project>

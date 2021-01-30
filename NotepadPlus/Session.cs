@@ -3,6 +3,7 @@ using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
+using NotepadPlus.UI;
 
 namespace NotepadPlus
 {
@@ -184,6 +185,26 @@ namespace NotepadPlus
         {
             Saved = false;
             Text = $@"{Path.GetFileName(FilePath)} {UnsavedFileMark}";
+        }
+
+        public void SetTheme(UITheme theme)
+        {
+            if (theme == UITheme.Default)
+            {
+                _textArea.BackColor = Color.White;
+                if (Type == FileType.PlainText)
+                {
+                    _textArea.ForeColor = Color.Black;
+                }
+            }
+            else if (theme == UITheme.Dark)
+            {
+                _textArea.BackColor = Color.DimGray;
+                if (Type == FileType.PlainText)
+                {
+                    _textArea.ForeColor = Color.White;
+                }
+            }
         }
 
     }

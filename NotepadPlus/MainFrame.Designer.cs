@@ -1,4 +1,5 @@
 ﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace NotepadPlus
 {
@@ -30,28 +31,28 @@ namespace NotepadPlus
         /// </summary>
         private void InitializeComponent()
         {
-            this.mainMenu = new System.Windows.Forms.ToolStrip();
-            this.dropdownFileButton = new System.Windows.Forms.ToolStripDropDownButton();
-            this.fileMenuItemCreate = new System.Windows.Forms.ToolStripMenuItem();
-            this.fileMenuItemCreatePlaintext = new System.Windows.Forms.ToolStripMenuItem();
-            this.fileMenuItemCreateRtf = new System.Windows.Forms.ToolStripMenuItem();
-            this.fileMenuItemOpen = new System.Windows.Forms.ToolStripMenuItem();
-            this.fileMenuItemSave = new System.Windows.Forms.ToolStripMenuItem();
-            this.fileMenuItemSaveAs = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.fileMenuItemClose = new System.Windows.Forms.ToolStripMenuItem();
-            this.fileMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.dropdownEditButton = new System.Windows.Forms.ToolStripDropDownButton();
-            this.dropdownFormatButton = new System.Windows.Forms.ToolStripDropDownButton();
-            this.dropdownSettingsButton = new System.Windows.Forms.ToolStripDropDownButton();
-            this.zoomInMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zoomOutMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.zoomResetMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.editorSettingsMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.dropdownInfoButton = new System.Windows.Forms.ToolStripDropDownButton();
-            this.infoMenuItemAbout = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabControl = new System.Windows.Forms.TabControl();
+            this.mainMenu = new NotepadPlus.UI.NToolStrip();
+            this.dropdownFileButton = new NotepadPlus.UI.NToolStripDropDownButton();
+            this.fileMenuItemCreate = new NotepadPlus.UI.NToolStripMenuItem();
+            this.fileMenuItemCreatePlaintext = new NotepadPlus.UI.NToolStripMenuItem();
+            this.fileMenuItemCreateRtf = new NotepadPlus.UI.NToolStripMenuItem();
+            this.fileMenuItemOpen = new NotepadPlus.UI.NToolStripMenuItem();
+            this.fileMenuItemSave = new NotepadPlus.UI.NToolStripMenuItem();
+            this.fileMenuItemSaveAs = new NotepadPlus.UI.NToolStripMenuItem();
+            this.toolStripSeparator2 = new NotepadPlus.UI.NToolStripSeparator();
+            this.fileMenuItemClose = new NotepadPlus.UI.NToolStripMenuItem();
+            this.fileMenuItemExit = new NotepadPlus.UI.NToolStripMenuItem();
+            this.dropdownEditButton = new NotepadPlus.UI.NToolStripDropDownButton();
+            this.dropdownFormatButton = new NotepadPlus.UI.NToolStripDropDownButton();
+            this.dropdownSettingsButton = new NotepadPlus.UI.NToolStripDropDownButton();
+            this.zoomInMenuItem = new NotepadPlus.UI.NToolStripMenuItem();
+            this.zoomOutMenuItem = new NotepadPlus.UI.NToolStripMenuItem();
+            this.zoomResetMenuItem = new NotepadPlus.UI.NToolStripMenuItem();
+            this.toolStripSeparator1 = new NotepadPlus.UI.NToolStripSeparator();
+            this.editorSettingsMenuItem = new NotepadPlus.UI.NToolStripMenuItem();
+            this.dropdownInfoButton = new NotepadPlus.UI.NToolStripDropDownButton();
+            this.infoMenuItemAbout = new NotepadPlus.UI.NToolStripMenuItem();
+            this.tabControl = new NotepadPlus.UI.NTabControl();
             this.mainMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,7 +60,7 @@ namespace NotepadPlus
             // 
             this.mainMenu.BackColor = Color.White;
             this.mainMenu.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.mainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mainMenu.Items.AddRange(new [] {
             this.dropdownFileButton,
             this.dropdownEditButton,
             this.dropdownFormatButton,
@@ -90,7 +91,7 @@ namespace NotepadPlus
             // 
             // fileMenuItemCreate
             // 
-            this.fileMenuItemCreate.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileMenuItemCreate.DropDownItems.AddRange(new [] {
             this.fileMenuItemCreatePlaintext,
             this.fileMenuItemCreateRtf});
             this.fileMenuItemCreate.Name = "fileMenuItemCreate";
@@ -228,7 +229,7 @@ namespace NotepadPlus
             // dropdownInfoButton
             // 
             this.dropdownInfoButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.dropdownInfoButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dropdownInfoButton.DropDownItems.AddRange(new [] {
             this.infoMenuItemAbout});
             this.dropdownInfoButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.dropdownInfoButton.Name = "dropdownInfoButton";
@@ -268,41 +269,41 @@ namespace NotepadPlus
             this.PerformLayout();
         }
         
-        private System.Windows.Forms.ToolStripMenuItem infoMenuItemAbout;
+        private NotepadPlus.UI.NToolStripMenuItem infoMenuItemAbout;
 
-        private System.Windows.Forms.ToolStripDropDownButton dropdownInfoButton;
+        private NotepadPlus.UI.NToolStripDropDownButton dropdownInfoButton;
 
-        private System.Windows.Forms.ToolStripMenuItem fileMenuItemCreatePlaintext;
-        private System.Windows.Forms.ToolStripMenuItem fileMenuItemCreateRtf;
+        private NotepadPlus.UI.NToolStripMenuItem fileMenuItemCreatePlaintext;
+        private NotepadPlus.UI.NToolStripMenuItem fileMenuItemCreateRtf;
 
-        private System.Windows.Forms.ToolStripMenuItem fileMenuItemClose;
+        private NotepadPlus.UI.NToolStripMenuItem fileMenuItemClose;
 
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private NotepadPlus.UI.NToolStripSeparator toolStripSeparator2;
 
-        private System.Windows.Forms.ToolStripMenuItem editorSettingsMenuItem;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private NotepadPlus.UI.NToolStripMenuItem editorSettingsMenuItem;
+        private NotepadPlus.UI.NToolStripSeparator toolStripSeparator1;
 
-        private System.Windows.Forms.ToolStripMenuItem zoomResetMenuItem;
+        private NotepadPlus.UI.NToolStripMenuItem zoomResetMenuItem;
 
-        private System.Windows.Forms.ToolStripMenuItem zoomInMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem zoomOutMenuItem;
+        private NotepadPlus.UI.NToolStripMenuItem zoomInMenuItem;
+        private NotepadPlus.UI.NToolStripMenuItem zoomOutMenuItem;
 
-        private System.Windows.Forms.ToolStripDropDownButton dropdownFormatButton;
-        private System.Windows.Forms.ToolStripDropDownButton dropdownSettingsButton;
+        private NotepadPlus.UI.NToolStripDropDownButton dropdownFormatButton;
+        private NotepadPlus.UI.NToolStripDropDownButton dropdownSettingsButton;
 
-        private System.Windows.Forms.ToolStripDropDownButton dropdownEditButton;
+        private NotepadPlus.UI.NToolStripDropDownButton dropdownEditButton;
 
-        private System.Windows.Forms.ToolStripMenuItem fileMenuItemCreate;
-        private System.Windows.Forms.ToolStripMenuItem fileMenuItemExit;
-        private System.Windows.Forms.ToolStripMenuItem fileMenuItemOpen;
-        private System.Windows.Forms.ToolStripMenuItem fileMenuItemSave;
-        private System.Windows.Forms.ToolStripMenuItem fileMenuItemSaveAs;
+        private NotepadPlus.UI.NToolStripMenuItem fileMenuItemCreate;
+        private NotepadPlus.UI.NToolStripMenuItem fileMenuItemExit;
+        private NotepadPlus.UI.NToolStripMenuItem fileMenuItemOpen;
+        private NotepadPlus.UI.NToolStripMenuItem fileMenuItemSave;
+        private NotepadPlus.UI.NToolStripMenuItem fileMenuItemSaveAs;
 
-        private System.Windows.Forms.ToolStripDropDownButton dropdownFileButton;
+        private NotepadPlus.UI.NToolStripDropDownButton dropdownFileButton;
         
 
-        private System.Windows.Forms.ToolStrip mainMenu;
-        private System.Windows.Forms.TabControl tabControl;
+        private NotepadPlus.UI.NToolStrip mainMenu;
+        private NotepadPlus.UI.NTabControl tabControl;
 
         #endregion
     }
