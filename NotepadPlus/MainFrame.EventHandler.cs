@@ -83,7 +83,7 @@ namespace NotepadPlus
 
         private void OnExitMenuItemClick(object sender, EventArgs e)
         {
-            OnApplicationExit(sender, (CancelEventArgs) e);
+            this.Close();
         }
 
         private void OnZoomInClick(object sender, EventArgs e)
@@ -121,7 +121,7 @@ namespace NotepadPlus
             settingsForm.Dispose();
         }
 
-        private void OnApplicationExit(object sender, CancelEventArgs e)
+        private void OnFormClosing(object sender, CancelEventArgs e)
         {
             // Проверим наличие несохраненных вкладок.
             foreach (Session s in tabControl.Controls)
@@ -138,6 +138,9 @@ namespace NotepadPlus
                     }
                 }
             }
+            
+            // Нужно удалить эту форму из списка.
+            Program.OpenedFrames.Remove(this);
         }
 
         private void OnTabSwitched(object sender, EventArgs e)
@@ -148,6 +151,20 @@ namespace NotepadPlus
             // сменить контекстное меню на актуальное.
             dropdownFormatButton.DropDownItems.Clear();
             dropdownFormatButton.DropDownItems.AddRange(GetCurrentTab().ContextMenu.GetRangeOfItems());
+        }
+
+        private void OnOpenNewWindow(object? sender, EventArgs e)
+        {
+            if (Program.OpenedFrames.Count >= Program.MaxOpenedFramesAmount)
+            {
+                MessageBox.Show(
+                    $"Превышено максимальное число открытых окон редактора - {Program.MaxOpenedFramesAmount}.", 
+                    "Ошибка");
+            }
+            else
+            {
+                new MainFrame().ShowDialog();
+            }
         }
     }
 }

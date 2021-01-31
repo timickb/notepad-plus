@@ -1,5 +1,4 @@
-﻿using System.Configuration;
-using System.IO;
+﻿using System.IO;
 using System.Windows.Forms;
 using NotepadPlus.UI;
 
@@ -9,15 +8,16 @@ namespace NotepadPlus
     {
         public MainFrame()
         {
+            Program.OpenedFrames.Add(this);
             InitializeComponent();
 
-            Closing += OnApplicationExit;
+            Closing += OnFormClosing;
             tabControl.SelectedIndexChanged += OnTabSwitched;
 
             fileMenuItemCreatePlaintext.PerformClick();
             dropdownFormatButton.DropDownItems.AddRange(GetCurrentTab().ContextMenu.GetRangeOfItems());
 
-            SetApplicationUITheme(UITheme.Dark);
+            SetApplicationUITheme(UITheme.Default);
         }
 
         public void SetApplicationUITheme(UITheme theme)
@@ -30,6 +30,7 @@ namespace NotepadPlus
             this.fileMenuItemOpen.SetTheme(theme);
             this.fileMenuItemSave.SetTheme(theme);
             this.fileMenuItemSaveAs.SetTheme(theme);
+            this.fileMenuItemOpenNewWindow.SetTheme(theme);
             this.toolStripSeparator2.SetTheme(theme);
             this.fileMenuItemClose.SetTheme(theme);
             this.fileMenuItemExit.SetTheme(theme);

@@ -22,8 +22,29 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d87eeb77-0f87-42d9-9212-f4f88602a0a9" name="Default Changelist" comment="UI Classes">
+    <list default="true" id="d87eeb77-0f87-42d9-9212-f4f88602a0a9" name="Default Changelist" comment="Dark theme beta">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.NotepadPlus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NotepadPlus/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NotepadPlus/FormatContextMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/FormatContextMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/MainFrame.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/MainFrame.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/MainFrame.EventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/MainFrame.EventHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/MainFrame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/MainFrame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/NotepadPlus.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/NotepadPlus.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/bin/Debug/netcoreapp3.1/NotepadPlus.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/bin/Debug/netcoreapp3.1/NotepadPlus.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/bin/Debug/netcoreapp3.1/NotepadPlus.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/bin/Debug/netcoreapp3.1/NotepadPlus.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/bin/Debug/netcoreapp3.1/NotepadPlus.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/bin/Debug/netcoreapp3.1/NotepadPlus.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/obj/Debug/netcoreapp3.1/NotepadPlus.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/obj/Debug/netcoreapp3.1/NotepadPlus.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/obj/Debug/netcoreapp3.1/NotepadPlus.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/obj/Debug/netcoreapp3.1/NotepadPlus.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/obj/Debug/netcoreapp3.1/NotepadPlus.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/obj/Debug/netcoreapp3.1/NotepadPlus.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/obj/Debug/netcoreapp3.1/NotepadPlus.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/obj/Debug/netcoreapp3.1/NotepadPlus.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/obj/Debug/netcoreapp3.1/NotepadPlus.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/obj/Debug/netcoreapp3.1/NotepadPlus.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/obj/Debug/netcoreapp3.1/NotepadPlus.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/obj/Debug/netcoreapp3.1/NotepadPlus.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/obj/NotepadPlus.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/obj/NotepadPlus.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/obj/NotepadPlus.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/obj/NotepadPlus.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,21 +64,22 @@
         <option value="$PROJECT_DIR$/NotepadPlus/SettingsFrame.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/SettingsFrame.Designer.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/Session.EventHandler.cs" />
-        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.EventHandler.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/appsettings.json" />
         <option value="$PROJECT_DIR$/NotepadPlus/UI/NToolStripDropdownButton.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/UI/NToolStripDropDownItem.cs" />
-        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.Designer.cs" />
-        <option value="$PROJECT_DIR$/NotepadPlus/FormatContextMenu.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/UI/UITheme.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/UI/NToolStripMenuItem.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/UI/NToolStripItem.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/UI/NToolStripSeparator.cs" />
-        <option value="$PROJECT_DIR$/NotepadPlus/UI/NTabControl.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/UI/NToolStrip.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/UI/NToolStripDropDownButton.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/Session.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/FormatContextMenu.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/UI/NTabControl.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.Designer.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/Program.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.EventHandler.cs" />
       </list>
     </option>
   </component>
@@ -104,7 +126,8 @@
       <workItem from="1611757441397" duration="948000" />
       <workItem from="1611766109742" duration="4395000" />
       <workItem from="1611834442122" duration="3455000" />
-      <workItem from="1611842425331" duration="27777000" />
+      <workItem from="1611842425331" duration="29170000" />
+      <workItem from="1612124786472" duration="1574000" />
     </task>
     <task id="LOCAL-00001" summary="Created main frame">
       <created>1611767145283</created>
@@ -202,97 +225,98 @@
     <MESSAGE value="Fixed new file unsaved mark bug" />
     <MESSAGE value="Fixes" />
     <MESSAGE value="UI Classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI Classes" />
+    <MESSAGE value="Dark theme beta" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dark theme beta" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1236" height="186" key="GridCell.Tab.0.bottom" timestamp="1612018840986">
+    <state width="1236" height="185" key="GridCell.Tab.0.bottom" timestamp="1612126068271">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="186" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1612018840986" />
-    <state width="1236" height="186" key="GridCell.Tab.0.center" timestamp="1612018840986">
+    <state width="1236" height="185" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1612126068271" />
+    <state width="1236" height="185" key="GridCell.Tab.0.center" timestamp="1612126068270">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="186" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1612018840986" />
-    <state width="1236" height="186" key="GridCell.Tab.0.left" timestamp="1612018840985">
+    <state width="1236" height="185" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1612126068270" />
+    <state width="1236" height="185" key="GridCell.Tab.0.left" timestamp="1612126068270">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="186" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1612018840985" />
-    <state width="1236" height="186" key="GridCell.Tab.0.right" timestamp="1612018840986">
+    <state width="1236" height="185" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1612126068270" />
+    <state width="1236" height="185" key="GridCell.Tab.0.right" timestamp="1612126068271">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="186" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1612018840986" />
-    <state width="1236" height="258" key="GridCell.Tab.1.bottom" timestamp="1611930365442">
+    <state width="1236" height="185" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1612126068271" />
+    <state width="1236" height="258" key="GridCell.Tab.1.bottom" timestamp="1612020525324">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="258" key="GridCell.Tab.1.bottom/0.0.1280.720@0.0.1280.720" timestamp="1611930365442" />
-    <state width="1236" height="258" key="GridCell.Tab.1.center" timestamp="1611930365442">
+    <state width="1236" height="258" key="GridCell.Tab.1.bottom/0.0.1280.720@0.0.1280.720" timestamp="1612020525324" />
+    <state width="1236" height="258" key="GridCell.Tab.1.center" timestamp="1612020525324">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="258" key="GridCell.Tab.1.center/0.0.1280.720@0.0.1280.720" timestamp="1611930365442" />
-    <state width="1236" height="258" key="GridCell.Tab.1.left" timestamp="1611930365441">
+    <state width="1236" height="258" key="GridCell.Tab.1.center/0.0.1280.720@0.0.1280.720" timestamp="1612020525324" />
+    <state width="1236" height="258" key="GridCell.Tab.1.left" timestamp="1612020525324">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="258" key="GridCell.Tab.1.left/0.0.1280.720@0.0.1280.720" timestamp="1611930365441" />
-    <state width="1236" height="258" key="GridCell.Tab.1.right" timestamp="1611930365442">
+    <state width="1236" height="258" key="GridCell.Tab.1.left/0.0.1280.720@0.0.1280.720" timestamp="1612020525324" />
+    <state width="1236" height="258" key="GridCell.Tab.1.right" timestamp="1612020525324">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="258" key="GridCell.Tab.1.right/0.0.1280.720@0.0.1280.720" timestamp="1611930365442" />
-    <state width="1236" height="258" key="GridCell.Tab.2.bottom" timestamp="1611930365443">
+    <state width="1236" height="258" key="GridCell.Tab.1.right/0.0.1280.720@0.0.1280.720" timestamp="1612020525324" />
+    <state width="1236" height="258" key="GridCell.Tab.2.bottom" timestamp="1612020525324">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="258" key="GridCell.Tab.2.bottom/0.0.1280.720@0.0.1280.720" timestamp="1611930365443" />
-    <state width="1236" height="258" key="GridCell.Tab.2.center" timestamp="1611930365443">
+    <state width="1236" height="258" key="GridCell.Tab.2.bottom/0.0.1280.720@0.0.1280.720" timestamp="1612020525324" />
+    <state width="1236" height="258" key="GridCell.Tab.2.center" timestamp="1612020525324">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="258" key="GridCell.Tab.2.center/0.0.1280.720@0.0.1280.720" timestamp="1611930365443" />
-    <state width="1236" height="258" key="GridCell.Tab.2.left" timestamp="1611930365442">
+    <state width="1236" height="258" key="GridCell.Tab.2.center/0.0.1280.720@0.0.1280.720" timestamp="1612020525324" />
+    <state width="1236" height="258" key="GridCell.Tab.2.left" timestamp="1612020525324">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="258" key="GridCell.Tab.2.left/0.0.1280.720@0.0.1280.720" timestamp="1611930365442" />
-    <state width="1236" height="258" key="GridCell.Tab.2.right" timestamp="1611930365443">
+    <state width="1236" height="258" key="GridCell.Tab.2.left/0.0.1280.720@0.0.1280.720" timestamp="1612020525324" />
+    <state width="1236" height="258" key="GridCell.Tab.2.right" timestamp="1612020525324">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="258" key="GridCell.Tab.2.right/0.0.1280.720@0.0.1280.720" timestamp="1611930365443" />
-    <state width="1236" height="258" key="GridCell.Tab.3.bottom" timestamp="1611930365443">
+    <state width="1236" height="258" key="GridCell.Tab.2.right/0.0.1280.720@0.0.1280.720" timestamp="1612020525324" />
+    <state width="1236" height="258" key="GridCell.Tab.3.bottom" timestamp="1612020525324">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="258" key="GridCell.Tab.3.bottom/0.0.1280.720@0.0.1280.720" timestamp="1611930365443" />
-    <state width="1236" height="258" key="GridCell.Tab.3.center" timestamp="1611930365443">
+    <state width="1236" height="258" key="GridCell.Tab.3.bottom/0.0.1280.720@0.0.1280.720" timestamp="1612020525324" />
+    <state width="1236" height="258" key="GridCell.Tab.3.center" timestamp="1612020525324">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="258" key="GridCell.Tab.3.center/0.0.1280.720@0.0.1280.720" timestamp="1611930365443" />
-    <state width="1236" height="258" key="GridCell.Tab.3.left" timestamp="1611930365443">
+    <state width="1236" height="258" key="GridCell.Tab.3.center/0.0.1280.720@0.0.1280.720" timestamp="1612020525324" />
+    <state width="1236" height="258" key="GridCell.Tab.3.left" timestamp="1612020525324">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="258" key="GridCell.Tab.3.left/0.0.1280.720@0.0.1280.720" timestamp="1611930365443" />
-    <state width="1236" height="258" key="GridCell.Tab.3.right" timestamp="1611930365443">
+    <state width="1236" height="258" key="GridCell.Tab.3.left/0.0.1280.720@0.0.1280.720" timestamp="1612020525324" />
+    <state width="1236" height="258" key="GridCell.Tab.3.right" timestamp="1612020525324">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="258" key="GridCell.Tab.3.right/0.0.1280.720@0.0.1280.720" timestamp="1611930365443" />
-    <state width="1236" height="258" key="GridCell.Tab.4.bottom" timestamp="1611930365443">
+    <state width="1236" height="258" key="GridCell.Tab.3.right/0.0.1280.720@0.0.1280.720" timestamp="1612020525324" />
+    <state width="1236" height="258" key="GridCell.Tab.4.bottom" timestamp="1612020525324">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="258" key="GridCell.Tab.4.bottom/0.0.1280.720@0.0.1280.720" timestamp="1611930365443" />
-    <state width="1236" height="258" key="GridCell.Tab.4.center" timestamp="1611930365443">
+    <state width="1236" height="258" key="GridCell.Tab.4.bottom/0.0.1280.720@0.0.1280.720" timestamp="1612020525324" />
+    <state width="1236" height="258" key="GridCell.Tab.4.center" timestamp="1612020525324">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="258" key="GridCell.Tab.4.center/0.0.1280.720@0.0.1280.720" timestamp="1611930365443" />
-    <state width="1236" height="258" key="GridCell.Tab.4.left" timestamp="1611930365443">
+    <state width="1236" height="258" key="GridCell.Tab.4.center/0.0.1280.720@0.0.1280.720" timestamp="1612020525324" />
+    <state width="1236" height="258" key="GridCell.Tab.4.left" timestamp="1612020525324">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="258" key="GridCell.Tab.4.left/0.0.1280.720@0.0.1280.720" timestamp="1611930365443" />
-    <state width="1236" height="258" key="GridCell.Tab.4.right" timestamp="1611930365443">
+    <state width="1236" height="258" key="GridCell.Tab.4.left/0.0.1280.720@0.0.1280.720" timestamp="1612020525324" />
+    <state width="1236" height="258" key="GridCell.Tab.4.right" timestamp="1612020525324">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="258" key="GridCell.Tab.4.right/0.0.1280.720@0.0.1280.720" timestamp="1611930365443" />
+    <state width="1236" height="258" key="GridCell.Tab.4.right/0.0.1280.720@0.0.1280.720" timestamp="1612020525324" />
     <state x="271" y="19" key="ToolboxManager" timestamp="1611955875065">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="271" y="19" key="ToolboxManager/0.0.1280.720@0.0.1280.720" timestamp="1611955875065" />
-    <state x="233" y="80" key="Vcs.Push.Dialog.v2" timestamp="1612015186479">
+    <state x="233" y="80" key="Vcs.Push.Dialog.v2" timestamp="1612019047677">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="233" y="80" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1612015186479" />
+    <state x="233" y="80" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1612019047677" />
     <state x="0" y="0" width="642" height="720" key="find.popup" timestamp="1611960315992">
       <screen x="0" y="0" width="1280" height="720" />
     </state>

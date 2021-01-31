@@ -69,7 +69,8 @@ namespace NotepadPlus
         {
             // KOSTYL: пришлось создавать копии пунктов меню (дублирование
             // огромного куска кода из конструктора выше). Оправадание:
-            // торопился к дедлайну,а передача их по ссылке не работала правильно.
+            // торопился к дедлайну,а передача их по ссылке сразу в два места
+            // (в меню "Формат" и в RichTextBox.ContextMenuStrip) не работала правильно.
             NToolStripMenuItem copyMenuItem = new NToolStripMenuItem(_copyMenuItem.Text);
             NToolStripMenuItem pasteMenuItem = new NToolStripMenuItem(_pasteMenuItem.Text);
             NToolStripMenuItem selectAllMenuItem = new NToolStripMenuItem(_selectAllMenuItem.Text);

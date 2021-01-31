@@ -35,6 +35,7 @@ namespace NotepadPlus
             this.dropdownFileButton = new NotepadPlus.UI.NToolStripDropDownButton();
             this.fileMenuItemCreate = new NotepadPlus.UI.NToolStripMenuItem();
             this.fileMenuItemCreatePlaintext = new NotepadPlus.UI.NToolStripMenuItem();
+            this.fileMenuItemOpenNewWindow = new NotepadPlus.UI.NToolStripMenuItem();
             this.fileMenuItemCreateRtf = new NotepadPlus.UI.NToolStripMenuItem();
             this.fileMenuItemOpen = new NotepadPlus.UI.NToolStripMenuItem();
             this.fileMenuItemSave = new NotepadPlus.UI.NToolStripMenuItem();
@@ -81,6 +82,7 @@ namespace NotepadPlus
             this.fileMenuItemOpen,
             this.fileMenuItemSave,
             this.fileMenuItemSaveAs,
+            this.fileMenuItemOpenNewWindow,
             this.toolStripSeparator2,
             this.fileMenuItemClose,
             this.fileMenuItemExit});
@@ -138,6 +140,13 @@ namespace NotepadPlus
             this.fileMenuItemSaveAs.Size = new System.Drawing.Size(398, 34);
             this.fileMenuItemSaveAs.Text = "Сохранить как";
             this.fileMenuItemSaveAs.Click += new System.EventHandler(this.OnSaveFileAs);
+            //
+            // fileMenuItemOpenNewWindow
+            //
+            this.fileMenuItemOpenNewWindow.Name = "fileMenuItemOpenNewWindow";
+            this.fileMenuItemOpenNewWindow.ShortcutKeys = Keys.Control | Keys.Shift | Keys.N;
+            this.fileMenuItemOpenNewWindow.Text = "Открыть новое окно";
+            this.fileMenuItemOpenNewWindow.Click += new System.EventHandler(this.OnOpenNewWindow);
             // 
             // toolStripSeparator2
             // 
@@ -298,6 +307,7 @@ namespace NotepadPlus
         private NotepadPlus.UI.NToolStripMenuItem fileMenuItemOpen;
         private NotepadPlus.UI.NToolStripMenuItem fileMenuItemSave;
         private NotepadPlus.UI.NToolStripMenuItem fileMenuItemSaveAs;
+        private NotepadPlus.UI.NToolStripMenuItem fileMenuItemOpenNewWindow;
 
         private NotepadPlus.UI.NToolStripDropDownButton dropdownFileButton;
         

@@ -14,3 +14,6 @@ D:\SharpTasks\NotepadPlus\NotepadPlus\obj\Debug\netcoreapp3.1\NotepadPlus.dll
 D:\SharpTasks\NotepadPlus\NotepadPlus\obj\Debug\netcoreapp3.1\NotepadPlus.pdb
 D:\SharpTasks\NotepadPlus\NotepadPlus\obj\Debug\netcoreapp3.1\NotepadPlus.genruntimeconfig.cache
 D:\SharpTasks\NotepadPlus\NotepadPlus\obj\Debug\netcoreapp3.1\NotepadPlus.SettingsFrame.resources
+D:\SharpTasks\NotepadPlus\NotepadPlus\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\SharpTasks\NotepadPlus\NotepadPlus\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+D:\SharpTasks\NotepadPlus\NotepadPlus\obj\Debug\netcoreapp3.1\NotepadPlus.csproj.CopyComplete
