@@ -153,7 +153,7 @@ namespace NotepadPlus
             dropdownFormatButton.DropDownItems.AddRange(GetCurrentTab().ContextMenu.GetRangeOfItems());
         }
 
-        private void OnOpenNewWindow(object? sender, EventArgs e)
+        private void OnOpenNewWindow(object sender, EventArgs e)
         {
             if (Program.OpenedFrames.Count >= Program.MaxOpenedFramesAmount)
             {
@@ -164,6 +164,24 @@ namespace NotepadPlus
             else
             {
                 new MainFrame().ShowDialog();
+            }
+        }
+
+        private void OnSaveFileAll(object sender, EventArgs e)
+        {
+            foreach (Session s in tabControl.Controls)
+            {
+                if (!s.Saved)
+                {
+                    if (s.HasPath)
+                    {
+                        s.WriteChangesToFile();
+                    }
+                    else
+                    {
+                        OpenDialogForUnsavedFile(s);
+                    }
+                }
             }
         }
     }

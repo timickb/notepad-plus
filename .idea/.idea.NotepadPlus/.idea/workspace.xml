@@ -22,7 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d87eeb77-0f87-42d9-9212-f4f88602a0a9" name="Default Changelist" comment="Dark theme beta">
+    <list default="true" id="d87eeb77-0f87-42d9-9212-f4f88602a0a9" name="Default Changelist" comment="Multiframing">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NotepadPlus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NotepadPlus/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NotepadPlus/FormatContextMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/FormatContextMenu.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NotepadPlus/MainFrame.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/MainFrame.Designer.cs" afterDir="false" />
@@ -76,10 +76,10 @@
         <option value="$PROJECT_DIR$/NotepadPlus/Session.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/FormatContextMenu.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/UI/NTabControl.cs" />
-        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.Designer.cs" />
-        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/Program.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.EventHandler.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.Designer.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.cs" />
       </list>
     </option>
   </component>
@@ -127,7 +127,7 @@
       <workItem from="1611766109742" duration="4395000" />
       <workItem from="1611834442122" duration="3455000" />
       <workItem from="1611842425331" duration="29170000" />
-      <workItem from="1612124786472" duration="1574000" />
+      <workItem from="1612124786472" duration="1969000" />
     </task>
     <task id="LOCAL-00001" summary="Created main frame">
       <created>1611767145283</created>
@@ -192,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612015120386</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Multiframing">
+      <created>1612126420347</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1612126420347</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,7 +233,8 @@
     <MESSAGE value="Fixes" />
     <MESSAGE value="UI Classes" />
     <MESSAGE value="Dark theme beta" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dark theme beta" />
+    <MESSAGE value="Multiframing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Multiframing" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1236" height="185" key="GridCell.Tab.0.bottom" timestamp="1612126068271">
@@ -313,10 +321,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="271" y="19" key="ToolboxManager/0.0.1280.720@0.0.1280.720" timestamp="1611955875065" />
-    <state x="233" y="80" key="Vcs.Push.Dialog.v2" timestamp="1612019047677">
+    <state x="233" y="80" key="Vcs.Push.Dialog.v2" timestamp="1612126423866">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="233" y="80" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1612019047677" />
+    <state x="233" y="80" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1612126423866" />
     <state x="0" y="0" width="642" height="720" key="find.popup" timestamp="1611960315992">
       <screen x="0" y="0" width="1280" height="720" />
     </state>

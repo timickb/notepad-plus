@@ -40,6 +40,7 @@ namespace NotepadPlus
             this.fileMenuItemOpen = new NotepadPlus.UI.NToolStripMenuItem();
             this.fileMenuItemSave = new NotepadPlus.UI.NToolStripMenuItem();
             this.fileMenuItemSaveAs = new NotepadPlus.UI.NToolStripMenuItem();
+            this.fileMenuItemSaveAll = new NotepadPlus.UI.NToolStripMenuItem();
             this.toolStripSeparator2 = new NotepadPlus.UI.NToolStripSeparator();
             this.fileMenuItemClose = new NotepadPlus.UI.NToolStripMenuItem();
             this.fileMenuItemExit = new NotepadPlus.UI.NToolStripMenuItem();
@@ -82,6 +83,7 @@ namespace NotepadPlus
             this.fileMenuItemOpen,
             this.fileMenuItemSave,
             this.fileMenuItemSaveAs,
+            this.fileMenuItemSaveAll,
             this.fileMenuItemOpenNewWindow,
             this.toolStripSeparator2,
             this.fileMenuItemClose,
@@ -140,6 +142,13 @@ namespace NotepadPlus
             this.fileMenuItemSaveAs.Size = new System.Drawing.Size(398, 34);
             this.fileMenuItemSaveAs.Text = "Сохранить как";
             this.fileMenuItemSaveAs.Click += new System.EventHandler(this.OnSaveFileAs);
+            //
+            // fileMenuItemSaveAll
+            //
+            this.fileMenuItemSaveAll.Name = "fileMenuItemSaveAll";
+            this.fileMenuItemSaveAll.ShortcutKeys = Keys.Control | Keys.Shift | Keys.A;
+            this.fileMenuItemSaveAll.Text = "Сохранить все открытые вкладки";
+            this.fileMenuItemSaveAll.Click += new System.EventHandler(this.OnSaveFileAll);
             //
             // fileMenuItemOpenNewWindow
             //
@@ -308,6 +317,7 @@ namespace NotepadPlus
         private NotepadPlus.UI.NToolStripMenuItem fileMenuItemSave;
         private NotepadPlus.UI.NToolStripMenuItem fileMenuItemSaveAs;
         private NotepadPlus.UI.NToolStripMenuItem fileMenuItemOpenNewWindow;
+        private NotepadPlus.UI.NToolStripMenuItem fileMenuItemSaveAll;
 
         private NotepadPlus.UI.NToolStripDropDownButton dropdownFileButton;
         

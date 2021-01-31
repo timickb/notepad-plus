@@ -30,6 +30,7 @@ namespace NotepadPlus
             this.fileMenuItemOpen.SetTheme(theme);
             this.fileMenuItemSave.SetTheme(theme);
             this.fileMenuItemSaveAs.SetTheme(theme);
+            this.fileMenuItemSaveAll.SetTheme(theme);
             this.fileMenuItemOpenNewWindow.SetTheme(theme);
             this.toolStripSeparator2.SetTheme(theme);
             this.fileMenuItemClose.SetTheme(theme);
