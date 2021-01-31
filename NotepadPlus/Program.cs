@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
  * 1. Горячие клавиши для создания документа в новом окне существуют -
  * это те же самые клавиши, что используются для создания нового окна,
  * ведь в новом окне по умолчанию создается один новый документ!
+ * 2. Штуки из Microsoft.Extensions использовать разрешено.
  */
 
 namespace NotepadPlus
@@ -20,6 +21,8 @@ namespace NotepadPlus
     {
 
         public const int MaxOpenedFramesAmount = 5;
+
+        public const int AutoSaveInterval = 30000;
 
         public static IConfiguration Configuration { get; set; }
         

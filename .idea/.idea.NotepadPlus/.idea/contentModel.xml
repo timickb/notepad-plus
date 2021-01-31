@@ -6,6 +6,7 @@
     <e p="D:\SharpTasks\NotepadPlus" t="IncludeFlat">
       <e p="NotepadPlus" t="IncludeRecursive">
         <e p="appsettings.json" t="Include" />
+        <e p="AutoSaver.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="FileType.cs" t="Include" />
         <e p="FormatContextMenu.cs" t="Include" />
