@@ -22,18 +22,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d87eeb77-0f87-42d9-9212-f4f88602a0a9" name="Default Changelist" comment="Save All feature">
-      <change afterPath="$PROJECT_DIR$/NotepadPlus/AutoSaver.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.NotepadPlus/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NotepadPlus/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="d87eeb77-0f87-42d9-9212-f4f88602a0a9" name="Default Changelist" comment="added gitignore">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NotepadPlus/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NotepadPlus/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotepadPlus/MainFrame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/MainFrame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NotepadPlus/MainFrame.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/MainFrame.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NotepadPlus/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotepadPlus/bin/Debug/netcoreapp3.1/NotepadPlus.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/bin/Debug/netcoreapp3.1/NotepadPlus.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotepadPlus/bin/Debug/netcoreapp3.1/NotepadPlus.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/bin/Debug/netcoreapp3.1/NotepadPlus.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotepadPlus/obj/Debug/netcoreapp3.1/NotepadPlus.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/obj/Debug/netcoreapp3.1/NotepadPlus.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotepadPlus/obj/Debug/netcoreapp3.1/NotepadPlus.csproj.GenerateResource.cache" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/obj/Debug/netcoreapp3.1/NotepadPlus.csproj.GenerateResource.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotepadPlus/obj/Debug/netcoreapp3.1/NotepadPlus.dll" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/obj/Debug/netcoreapp3.1/NotepadPlus.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NotepadPlus/obj/Debug/netcoreapp3.1/NotepadPlus.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/NotepadPlus/obj/Debug/netcoreapp3.1/NotepadPlus.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,11 +57,11 @@
         <option value="$PROJECT_DIR$/NotepadPlus/Session.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/FormatContextMenu.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/UI/NTabControl.cs" />
-        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.Designer.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.EventHandler.cs" />
-        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/AutoSaver.cs" />
         <option value="$PROJECT_DIR$/NotepadPlus/Program.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.cs" />
+        <option value="$PROJECT_DIR$/NotepadPlus/MainFrame.Designer.cs" />
       </list>
     </option>
   </component>
@@ -118,7 +110,8 @@
       <workItem from="1611766109742" duration="4395000" />
       <workItem from="1611834442122" duration="3455000" />
       <workItem from="1611842425331" duration="29170000" />
-      <workItem from="1612124786472" duration="4124000" />
+      <workItem from="1612124786472" duration="4617000" />
+      <workItem from="1612129908510" duration="729000" />
     </task>
     <task id="LOCAL-00001" summary="Created main frame">
       <created>1611767145283</created>
@@ -197,7 +190,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612127156612</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Auto Saving features">
+      <created>1612128980430</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1612128980431</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added gitignore">
+      <created>1612129232705</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1612129232705</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,25 +240,27 @@
     <MESSAGE value="Dark theme beta" />
     <MESSAGE value="Multiframing" />
     <MESSAGE value="Save All feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="Save All feature" />
+    <MESSAGE value="Auto Saving features" />
+    <MESSAGE value="added gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="added gitignore" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1236" height="185" key="GridCell.Tab.0.bottom" timestamp="1612128940081">
+    <state width="1236" height="185" key="GridCell.Tab.0.bottom" timestamp="1612129447090">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="185" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1612128940081" />
-    <state width="1236" height="185" key="GridCell.Tab.0.center" timestamp="1612128940080">
+    <state width="1236" height="185" key="GridCell.Tab.0.bottom/0.0.1280.720@0.0.1280.720" timestamp="1612129447090" />
+    <state width="1236" height="185" key="GridCell.Tab.0.center" timestamp="1612129447088">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="185" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1612128940080" />
-    <state width="1236" height="185" key="GridCell.Tab.0.left" timestamp="1612128940079">
+    <state width="1236" height="185" key="GridCell.Tab.0.center/0.0.1280.720@0.0.1280.720" timestamp="1612129447088" />
+    <state width="1236" height="185" key="GridCell.Tab.0.left" timestamp="1612129447087">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="185" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1612128940079" />
-    <state width="1236" height="185" key="GridCell.Tab.0.right" timestamp="1612128940080">
+    <state width="1236" height="185" key="GridCell.Tab.0.left/0.0.1280.720@0.0.1280.720" timestamp="1612129447087" />
+    <state width="1236" height="185" key="GridCell.Tab.0.right" timestamp="1612129447089">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state width="1236" height="185" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1612128940080" />
+    <state width="1236" height="185" key="GridCell.Tab.0.right/0.0.1280.720@0.0.1280.720" timestamp="1612129447089" />
     <state width="1236" height="258" key="GridCell.Tab.1.bottom" timestamp="1612020525324">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
@@ -320,10 +329,10 @@
       <screen x="0" y="0" width="1280" height="720" />
     </state>
     <state x="271" y="19" key="ToolboxManager/0.0.1280.720@0.0.1280.720" timestamp="1611955875065" />
-    <state x="233" y="80" key="Vcs.Push.Dialog.v2" timestamp="1612127160236">
+    <state x="233" y="80" key="Vcs.Push.Dialog.v2" timestamp="1612129238053">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
-    <state x="233" y="80" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1612127160236" />
+    <state x="233" y="80" key="Vcs.Push.Dialog.v2/0.0.1280.720@0.0.1280.720" timestamp="1612129238053" />
     <state x="0" y="0" width="642" height="720" key="find.popup" timestamp="1611960315992">
       <screen x="0" y="0" width="1280" height="720" />
     </state>
