@@ -18,18 +18,41 @@ namespace NotepadPlus
 
             Closing += OnFormClosing;
             tabControl.SelectedIndexChanged += OnTabSwitched;
-
-            fileMenuItemCreatePlaintext.PerformClick();
-            dropdownFormatButton.DropDownItems.AddRange(GetCurrentTab().ContextMenu.GetRangeOfItems());
-
-            SetApplicationUITheme(UITheme.Default);
             
-            AutoSaver autoSaver = new AutoSaver(tabControl);
+            // Если в предыдущей сессии не было оставлено открытых
+            // вкладок - создаем по умолчанию новый текстовый файл.
+            // В противном случае воостанавливаем открытые раннее вкладки.
+            if (_config.OpenedTabs.Count == 0)
+            {
+                fileMenuItemCreatePlaintext.PerformClick();
+                dropdownFormatButton.DropDownItems.AddRange(GetCurrentTab().ContextMenu.GetRangeOfItems());
+            }
+            else
+            {
+                foreach (TabNote tab in _config.OpenedTabs)
+                {
+                    if (Utils.CheckFileAccessibility(tab.FilePath))
+                    {
+                        tabControl.Controls.Add(new Session(tab.FileType, tab.FilePath));
+                    }
+                }
+                // Активной сделаем первую вкладку из списка.
+                tabControl.SelectedIndex = 0;
+            }
+            
+            // Устанавливаем тему.
+            SetApplicationTheme(_config.ApplicationTheme);
+            
+            // Запускаем автосохранение.
+            AutoSaver autoSaver = new AutoSaver(tabControl, _config.AutoSavingInterval);
             autoSaver.Start();
+            
+            // Очищаем список открытых ранее вкладок в конфигурации.
+            _config.OpenedTabs.Clear();
 
         }
 
-        public void SetApplicationUITheme(UITheme theme)
+        public void SetApplicationTheme(UITheme theme)
         {
             this.mainMenu.SetTheme(theme);
             this.dropdownFileButton.SetTheme(theme);
@@ -44,6 +67,12 @@ namespace NotepadPlus
             this.toolStripSeparator2.SetTheme(theme);
             this.fileMenuItemClose.SetTheme(theme);
             this.fileMenuItemExit.SetTheme(theme);
+            this.editMenuItemRedo.SetTheme(theme);
+            this.editMenuItemUndo.SetTheme(theme);
+            this.editMenuItemChangeSyntax.SetTheme(theme);
+            this.editMenuItemChangeType.SetTheme(theme);
+            this.typeMenuItemPlaintext.SetTheme(theme);
+            this.typeMenuItemRichtext.SetTheme(theme);
             this.dropdownEditButton.SetTheme(theme);
             this.dropdownFormatButton.SetTheme(theme);
             this.dropdownSettingsButton.SetTheme(theme);
@@ -99,11 +128,22 @@ namespace NotepadPlus
 
         public void WriteChangesToConfig()
         {
+            foreach (Session s in tabControl.Controls)
+            {
+                if (s.HasPath)
+                {
+                    _config.OpenedTabs.Add(new TabNote
+                    {
+                        FilePath =  s.FilePath,
+                        FileType = s.Type
+                    });
+                }
+            }
             string jsonData = JsonConvert.SerializeObject(_config);
 
             try
             {
-                StreamWriter sw = new StreamWriter("appsettings.json");
+                StreamWriter sw = new StreamWriter($"{Program.UserAppDataPath}\\npp-settings.json");
                 sw.Write(jsonData);
                 sw.Close();
             }

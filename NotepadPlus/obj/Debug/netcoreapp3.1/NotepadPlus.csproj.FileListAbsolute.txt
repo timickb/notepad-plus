@@ -17,3 +17,4 @@ D:\SharpTasks\NotepadPlus\NotepadPlus\obj\Debug\netcoreapp3.1\NotepadPlus.Settin
 D:\SharpTasks\NotepadPlus\NotepadPlus\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
 D:\SharpTasks\NotepadPlus\NotepadPlus\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
 D:\SharpTasks\NotepadPlus\NotepadPlus\obj\Debug\netcoreapp3.1\NotepadPlus.csproj.CopyComplete
+D:\SharpTasks\NotepadPlus\NotepadPlus\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll

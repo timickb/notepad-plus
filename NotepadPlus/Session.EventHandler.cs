@@ -3,7 +3,7 @@ using System.Windows.Forms;
 
 namespace NotepadPlus
 {
-    public partial class Session
+    public sealed partial class Session
     {
         public void OnBufferPaste(object sender, EventArgs e)
         {

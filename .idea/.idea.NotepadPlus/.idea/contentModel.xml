@@ -29,6 +29,7 @@
         <e p="SettingsFrame.cs" t="Include" />
         <e p="SettingsFrame.Designer.cs" t="Include" />
         <e p="SettingsFrame.resx" t="Include" />
+        <e p="TabNote.cs" t="Include" />
         <e p="UI" t="Include">
           <e p="NTabControl.cs" t="Include" />
           <e p="NToolStrip.cs" t="Include" />

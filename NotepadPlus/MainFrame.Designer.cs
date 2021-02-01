@@ -122,6 +122,7 @@ namespace NotepadPlus
             this.fileMenuItemCreatePlaintext.Size = new System.Drawing.Size(280, 34);
             this.fileMenuItemCreatePlaintext.Text = "Текстовый файл";
             this.fileMenuItemCreatePlaintext.Click += new System.EventHandler(this.OnCreateFileText);
+            this.fileMenuItemCreatePlaintext.ShortcutKeys = Keys.Control | Keys.T;
             // 
             // fileMenuItemCreateRtf
             // 
@@ -129,6 +130,7 @@ namespace NotepadPlus
             this.fileMenuItemCreateRtf.Size = new System.Drawing.Size(280, 34);
             this.fileMenuItemCreateRtf.Text = "Файл в формате RTF";
             this.fileMenuItemCreateRtf.Click += new System.EventHandler(this.OnCreateFileRtf);
+            this.fileMenuItemCreateRtf.ShortcutKeys = Keys.Control | Keys.Shift | Keys.T;
             // 
             // fileMenuItemOpen
             // 

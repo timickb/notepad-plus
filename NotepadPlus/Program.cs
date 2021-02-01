@@ -26,6 +26,8 @@ namespace NotepadPlus
 
         public static IConfiguration Configuration { get; set; }
 
+        public static string UserAppDataPath => Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+
         /// <summary>
         /// В этом списке хранятся все открытые в одно время
         /// окна редактора.
@@ -44,19 +46,13 @@ namespace NotepadPlus
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Configuration config;
-            try
-            {
-                config = ReadConfig();
-            }
-            catch (Exception)
-            {
-                config = FixConfig();
-            }
-
+            var config = ReadConfig();
+            Console.WriteLine(config.ApplicationTheme);
+            Console.WriteLine(config.AutoSavingInterval);
+            Console.WriteLine(config.OpenedTabs.Count);
             Application.Run(new MainFrame(config));
         }
-        
+
         /// <summary>
         /// Метод десериализует JSON конфигурацию
         /// из файла appsettings.json
@@ -66,19 +62,19 @@ namespace NotepadPlus
         /// содержимое файла не соответствует формату настроек.</exception>
         private static Configuration ReadConfig()
         {
-            StreamReader sr = new StreamReader("appsettings.json");
-            string jsonData = sr.ReadToEnd();
-            sr.Close();
             try
             {
-                return JsonConvert.DeserializeObject(jsonData) as Configuration;
+                StreamReader sr = new StreamReader($"{UserAppDataPath}\\npp-settings.json");
+                string jsonData = sr.ReadToEnd();
+                sr.Close();
+                return JsonConvert.DeserializeObject<Configuration>(jsonData);
             }
             catch (Exception)
             {
-                throw new Exception("Configuration file is invalid.");
+                return FixConfig();
             }
         }
-        
+
         /// <summary>
         /// Метод создает дефолтную конфигурацию и
         /// записывает ее в файл. Использовать в случае,
@@ -91,11 +87,11 @@ namespace NotepadPlus
             {
                 ApplicationTheme = UITheme.Default,
                 AutoSavingInterval = 30000,
-                openedTabs = new List<Session>()
+                OpenedTabs = new List<TabNote>()
             };
             try
             {
-                StreamWriter sw = new StreamWriter("appsettings.json");
+                StreamWriter sw = new StreamWriter($"{UserAppDataPath}\\npp-settings.json");
                 sw.Write(JsonConvert.SerializeObject(newConfig));
                 sw.Close();
             }

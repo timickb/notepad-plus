@@ -15,10 +15,12 @@ namespace NotepadPlus
     public class AutoSaver
     {
         private readonly TabControl _control;
+        private readonly int _interval;
 
-        public AutoSaver(TabControl tabControl)
+        public AutoSaver(TabControl tabControl, int interval)
         {
             _control = tabControl;
+            _interval = interval;
         }
 
         public void Start()
@@ -30,7 +32,7 @@ namespace NotepadPlus
                         if (s.HasPath) s.WriteChangesToFile();
                     }
                 },
-                null, 0, Program.AutoSaveInterval);
+                null, 0, _interval);
         }
     }
 }

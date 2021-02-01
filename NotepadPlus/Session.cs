@@ -4,6 +4,8 @@ using System.IO;
 using System.Text;
 using System.Text.Json.Serialization;
 using System.Windows.Forms;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using NotepadPlus.UI;
 
 namespace NotepadPlus
@@ -14,9 +16,8 @@ namespace NotepadPlus
     /// содержащая информацию о соответствующем
     /// файле.
     /// </summary>
-    public partial class Session : TabPage
+    public sealed partial class Session : TabPage
     {
-        
         public const string UnsavedFileMark = "*";
         
         /// <summary>
@@ -54,14 +55,14 @@ namespace NotepadPlus
         /// уже файл на диске или был создан
         /// только что и ни разу не сохранялся.
         /// </summary>
-        [JsonPropertyName("hasPath")]
+        [System.Text.Json.Serialization.JsonIgnore]
         public bool HasPath { get; private set; }
 
         /// <summary>
         /// Свойство показывает, нет
         /// ли в файле несохраненных изменений.
         /// </summary>
-        [JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
         public bool Saved { get; private set; }
 
         /// <summary>
@@ -74,13 +75,14 @@ namespace NotepadPlus
         /// Формат файла.
         /// </summary>
         [JsonPropertyName("fileType")]
+        [Newtonsoft.Json.JsonConverter(typeof(StringEnumConverter))]
         public FileType Type { get; private set; }
         
         /// <summary>
         /// Обертка для величины масштабирования
         /// текста в RichTextBox.
         /// </summary>
-        [JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
         public float ZoomFactor
         {
             get => _textArea.ZoomFactor;
@@ -95,10 +97,9 @@ namespace NotepadPlus
         /// Контекстное меню, которое вызывается
         /// с помощью ПКМ.
         /// </summary>
-        [JsonIgnore]
+        [System.Text.Json.Serialization.JsonIgnore]
         public FormatContextMenu ContextMenu { get; }
-
-
+        
         public Session(string title, FileType type) : base(title)
         {
             Type = type;
@@ -108,6 +109,38 @@ namespace NotepadPlus
             ContextMenu = new FormatContextMenu(this);
             SetupTextArea();
 
+        }
+
+        [JsonConstructor]
+        public Session(FileType fileType, string filePath)
+        {
+            Type = fileType;
+            HasPath = true;
+            Saved = true;
+            FilePath = filePath;
+            ContextMenu = new FormatContextMenu(this);
+
+            try
+            {
+                StreamReader sr = new StreamReader(filePath);
+                switch (Type)
+                {
+                    case FileType.PlainText:
+                        _textArea.Text = sr.ReadToEnd();
+                        break;
+                    case FileType.RichText:
+                        _textArea.Rtf = sr.ReadToEnd();
+                        break;
+                }
+                sr.Close();
+            }
+            catch (Exception)
+            {
+                // жесть какая-то..., еще не придумал, что с этим можно сделать.
+            }
+
+
+            SetupTextArea();
         }
 
         private void SetupTextArea()

@@ -141,6 +141,9 @@ namespace NotepadPlus
             
             // Нужно удалить эту форму из списка.
             Program.OpenedFrames.Remove(this);
+            
+            // Сохраняем конфиг.
+            WriteChangesToConfig();
         }
 
         private void OnTabSwitched(object sender, EventArgs e)
