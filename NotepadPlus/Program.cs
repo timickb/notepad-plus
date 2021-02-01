@@ -1,7 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows.Forms;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
+using NotepadPlus.UI;
 
 
 /* ИНФА ДЛЯ ПРОВЕРЯЮЩЕГО
@@ -17,13 +20,12 @@ namespace NotepadPlus
 {
     static class Program
     {
-
         public const int MaxOpenedFramesAmount = 5;
 
         public const int AutoSaveInterval = 30000;
 
         public static IConfiguration Configuration { get; set; }
-        
+
         /// <summary>
         /// В этом списке хранятся все открытые в одно время
         /// окна редактора.
@@ -41,7 +43,68 @@ namespace NotepadPlus
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainFrame());
+
+            Configuration config;
+            try
+            {
+                config = ReadConfig();
+            }
+            catch (Exception)
+            {
+                config = FixConfig();
+            }
+
+            Application.Run(new MainFrame(config));
+        }
+        
+        /// <summary>
+        /// Метод десериализует JSON конфигурацию
+        /// из файла appsettings.json
+        /// </summary>
+        /// <returns>Объект конфигурации</returns>
+        /// <exception cref="Exception">Исключение выбрасывается в случае, если
+        /// содержимое файла не соответствует формату настроек.</exception>
+        private static Configuration ReadConfig()
+        {
+            StreamReader sr = new StreamReader("appsettings.json");
+            string jsonData = sr.ReadToEnd();
+            sr.Close();
+            try
+            {
+                return JsonConvert.DeserializeObject(jsonData) as Configuration;
+            }
+            catch (Exception)
+            {
+                throw new Exception("Configuration file is invalid.");
+            }
+        }
+        
+        /// <summary>
+        /// Метод создает дефолтную конфигурацию и
+        /// записывает ее в файл. Использовать в случае,
+        /// если файл конфигурации был поврежден.
+        /// </summary>
+        /// <returns>Объект конфигурации</returns>
+        private static Configuration FixConfig()
+        {
+            Configuration newConfig = new Configuration()
+            {
+                ApplicationTheme = UITheme.Default,
+                AutoSavingInterval = 30000,
+                openedTabs = new List<Session>()
+            };
+            try
+            {
+                StreamWriter sw = new StreamWriter("appsettings.json");
+                sw.Write(JsonConvert.SerializeObject(newConfig));
+                sw.Close();
+            }
+            catch (Exception)
+            {
+                // жесть просто, даже не знаю, что в такой ситуации делать :(
+            }
+
+            return newConfig;
         }
     }
 }

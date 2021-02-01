@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Gkc0L/8QvhUkInl26ts8/9mRdsX3uQOv+1CckoCiokgavbX0Y6Ul4C0rN6E5UtX34cfCUV0wa8Zjax6N1dOJMQ==",
+  "dgSpecHash": "DwNBVMDdLMd2UdyCQJMU8KTuVU+oXg5SMBPbjn07GsE7MeFfcylPPDhBh9uHoau/wHV0xkn3rwXChNw+aKJ+rA==",
   "success": true,
   "projectFilePath": "D:\\SharpTasks\\NotepadPlus\\NotepadPlus\\NotepadPlus.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\timik\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
-    "C:\\Users\\timik\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+    "C:\\Users\\timik\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\timik\\.nuget\\packages\\newtonsoft.json\\13.0.1-beta1\\newtonsoft.json.13.0.1-beta1.nupkg.sha512"
   ],
   "logs": []
 }

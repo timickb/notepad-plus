@@ -1,13 +1,18 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 using NotepadPlus.UI;
 
 namespace NotepadPlus
 {
     public partial class MainFrame : Form
     {
-        public MainFrame()
+        private Configuration _config;
+        public MainFrame(Configuration config)
         {
+            _config = config;
+            
             Program.OpenedFrames.Add(this);
             InitializeComponent();
 
@@ -90,6 +95,22 @@ namespace NotepadPlus
         public Session GetCurrentTab()
         {
             return (Session) tabControl.Controls[tabControl.SelectedIndex];
+        }
+
+        public void WriteChangesToConfig()
+        {
+            string jsonData = JsonConvert.SerializeObject(_config);
+
+            try
+            {
+                StreamWriter sw = new StreamWriter("appsettings.json");
+                sw.Write(jsonData);
+                sw.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Невозможно записать настройки в файл.", "Ошибка");
+            }
         }
     }
 }

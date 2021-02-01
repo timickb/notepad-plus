@@ -4,8 +4,11 @@ namespace NotepadPlus
 {
     public partial class SettingsFrame : Form
     {
-        public SettingsFrame()
+        private Configuration _config;
+        public SettingsFrame(Configuration config)
         {
+            _config = config;
+            
             InitializeComponent();
         }
         

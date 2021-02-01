@@ -112,7 +112,7 @@ namespace NotepadPlus
 
         private void OnSettingsOpen(object sender, EventArgs e)
         {
-            SettingsFrame settingsForm = new SettingsFrame();
+            SettingsFrame settingsForm = new SettingsFrame(_config);
 
             if (settingsForm.ShowDialog(this) == DialogResult.OK)
             {
@@ -163,7 +163,7 @@ namespace NotepadPlus
             }
             else
             {
-                new MainFrame().ShowDialog();
+                new MainFrame(_config).ShowDialog();
             }
         }
 

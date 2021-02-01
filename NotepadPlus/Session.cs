@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.IO;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Windows.Forms;
 using NotepadPlus.UI;
 
@@ -15,7 +16,7 @@ namespace NotepadPlus
     /// </summary>
     public partial class Session : TabPage
     {
-
+        
         public const string UnsavedFileMark = "*";
         
         /// <summary>
@@ -43,7 +44,7 @@ namespace NotepadPlus
 
             return newSession;
         }
-
+        
         private RichTextBox _textArea = new RichTextBox {Dock = DockStyle.Fill};
         private FontDialog _fontDialog = new FontDialog();
         private ColorDialog _colorDialog = new ColorDialog();
@@ -53,28 +54,33 @@ namespace NotepadPlus
         /// уже файл на диске или был создан
         /// только что и ни разу не сохранялся.
         /// </summary>
+        [JsonPropertyName("hasPath")]
         public bool HasPath { get; private set; }
 
         /// <summary>
         /// Свойство показывает, нет
         /// ли в файле несохраненных изменений.
         /// </summary>
+        [JsonIgnore]
         public bool Saved { get; private set; }
 
         /// <summary>
         /// Полный путь к файлу на диске.
         /// </summary>
+        [JsonPropertyName("filePath")]
         public string FilePath { get; private set; }
 
         /// <summary>
         /// Формат файла.
         /// </summary>
+        [JsonPropertyName("fileType")]
         public FileType Type { get; private set; }
         
         /// <summary>
         /// Обертка для величины масштабирования
         /// текста в RichTextBox.
         /// </summary>
+        [JsonIgnore]
         public float ZoomFactor
         {
             get => _textArea.ZoomFactor;
@@ -89,6 +95,7 @@ namespace NotepadPlus
         /// Контекстное меню, которое вызывается
         /// с помощью ПКМ.
         /// </summary>
+        [JsonIgnore]
         public FormatContextMenu ContextMenu { get; }
 
 

@@ -8,6 +8,7 @@
         <e p="appsettings.json" t="Include" />
         <e p="AutoSaver.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="Configuration.cs" t="Include" />
         <e p="FileType.cs" t="Include" />
         <e p="FormatContextMenu.cs" t="Include" />
         <e p="MainFrame.cs" t="Include" />
