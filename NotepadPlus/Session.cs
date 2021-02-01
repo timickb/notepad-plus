@@ -43,10 +43,10 @@ namespace NotepadPlus
 
             return newSession;
         }
-        
-        private RichTextBox _textArea;
-        private FontDialog _fontDialog;
-        private ColorDialog _colorDialog;
+
+        private RichTextBox _textArea = new RichTextBox {Dock = DockStyle.Fill};
+        private FontDialog _fontDialog = new FontDialog();
+        private ColorDialog _colorDialog = new ColorDialog();
 
         /// <summary>
         /// Свойство показывает, существует ли
@@ -94,18 +94,13 @@ namespace NotepadPlus
 
         public Session(string title, FileType type) : base(title)
         {
-            _textArea = new RichTextBox {Dock = DockStyle.Fill};
-            _fontDialog = new FontDialog();
-            _colorDialog = new ColorDialog();
-            
             Type = type;
             HasPath = false;
             Saved = true;
             FilePath = title;
             ContextMenu = new FormatContextMenu(this);
-            
             SetupTextArea();
-            Controls.Add(_textArea);
+
         }
 
         private void SetupTextArea()
@@ -121,7 +116,7 @@ namespace NotepadPlus
             _textArea.ContextMenuStrip = rightClickMenu;*/
 
             _textArea.ContextMenuStrip = ContextMenu;
-
+            Controls.Add(_textArea);
         }
 
         public void WriteChangesToFile()
@@ -183,29 +178,85 @@ namespace NotepadPlus
 
         private void MakeUnsaved()
         {
+            if (!Saved) return;
             Saved = false;
             Text = $@"{Path.GetFileName(FilePath)} {UnsavedFileMark}";
         }
 
         public void SetTheme(UITheme theme)
         {
-            if (theme == UITheme.Default)
+            switch (theme)
             {
-                _textArea.BackColor = Color.White;
-                if (Type == FileType.PlainText)
+                case UITheme.Default:
                 {
-                    _textArea.ForeColor = Color.Black;
+                    _textArea.BackColor = Color.White;
+                    if (Type == FileType.PlainText)
+                    {
+                        _textArea.ForeColor = Color.Black;
+                    }
+
+                    break;
                 }
-            }
-            else if (theme == UITheme.Dark)
-            {
-                _textArea.BackColor = Color.DimGray;
-                if (Type == FileType.PlainText)
+                case UITheme.Dark:
                 {
-                    _textArea.ForeColor = Color.White;
+                    _textArea.BackColor = Color.DimGray;
+                    if (Type == FileType.PlainText)
+                    {
+                        _textArea.ForeColor = Color.White;
+                    }
+
+                    break;
                 }
             }
         }
+        
+        /// <summary>
+        /// Отменить последнее действие
+        /// в текстовом поле.
+        /// </summary>
+        public void Undo()
+        {
+            if (_textArea.CanUndo)
+            {
+                _textArea.Undo();
+            }
+        }
+        
+        /// <summary>
+        /// Отменить отмену последнего
+        /// действия в текстовом поле.
+        /// </summary>
+        public void Redo()
+        {
+            if (_textArea.CanRedo)
+            {
+                _textArea.Redo();
+            }
+        }
+        
+        /// <summary>
+        /// Изменяет формат текущего
+        /// файла на текстовый.
+        /// </summary>
+        public void ConvertToPlaintext()
+        {
+            string text = _textArea.Text;
+            _textArea.Clear();
+            _textArea.Text = text;
+            Type = FileType.PlainText;
+        }
+        /// <summary>
+        /// Изменяет формат текущего
+        /// файла на RTF.
+        /// </summary>
+        public void ConvertToRichtext()
+        {
+            Type = FileType.RichText;
+        }
 
+        public override string ToString()
+        {
+            return $"{Type}, {Name}";
+        }
     }
 }

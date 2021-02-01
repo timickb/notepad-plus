@@ -184,5 +184,24 @@ namespace NotepadPlus
                 }
             }
         }
+
+        private void OnUndoChanges(object sender, EventArgs e)
+        {
+            GetCurrentTab().Undo();
+        }
+        private void OnRedoChanges(object sender, EventArgs e)
+        {
+            GetCurrentTab().Redo();
+        }
+
+        private void OnConvertToPlaintext(object sender, EventArgs e)
+        {
+            GetCurrentTab().ConvertToPlaintext();
+        }
+
+        private void OnConvertToRichtext(object sender, EventArgs e)
+        {
+            GetCurrentTab().ConvertToRichtext();
+        }
     }
 }

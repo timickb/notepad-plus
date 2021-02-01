@@ -44,12 +44,15 @@ namespace NotepadPlus
             this.editMenuItemRedo = new NotepadPlus.UI.NToolStripMenuItem();
             this.editMenuItemUndo = new NotepadPlus.UI.NToolStripMenuItem();
             this.editMenuItemChangeSyntax = new NotepadPlus.UI.NToolStripMenuItem();
+            this.editMenuItemChangeType = new NotepadPlus.UI.NToolStripMenuItem();
             this.syntaxMenuItemC = new NotepadPlus.UI.NToolStripMenuItem();
             this.syntaxMenuItemCpp = new NotepadPlus.UI.NToolStripMenuItem();
             this.syntaxMenuItemCs = new NotepadPlus.UI.NToolStripMenuItem();
             this.syntaxMenuItemJava = new NotepadPlus.UI.NToolStripMenuItem();
             this.syntaxMenuItemPython = new NotepadPlus.UI.NToolStripMenuItem();
             this.syntaxMenuItemJS = new NotepadPlus.UI.NToolStripMenuItem();
+            this.typeMenuItemPlaintext = new NotepadPlus.UI.NToolStripMenuItem();
+            this.typeMenuItemRichtext = new NotepadPlus.UI.NToolStripMenuItem();
             this.toolStripSeparator2 = new NotepadPlus.UI.NToolStripSeparator();
             this.fileMenuItemClose = new NotepadPlus.UI.NToolStripMenuItem();
             this.fileMenuItemExit = new NotepadPlus.UI.NToolStripMenuItem();
@@ -192,13 +195,14 @@ namespace NotepadPlus
             this.editMenuItemUndo.Name = "editMenuItemUndo";
             this.editMenuItemUndo.ShortcutKeys = Keys.Control | Keys.Z;
             this.editMenuItemUndo.Text = "Undo";
+            this.editMenuItemUndo.Click += new System.EventHandler(this.OnUndoChanges);
             //
             // editMenuItemRedo
             //
             this.editMenuItemRedo.Name = "editMenuItemRedo";
             this.editMenuItemRedo.ShortcutKeys = Keys.Control | Keys.Shift | Keys.Z;
             this.editMenuItemRedo.Text = "Redo";
-            
+            this.editMenuItemRedo.Click += new System.EventHandler(this.OnRedoChanges);
             //
             // editMenuItemChangeSyntax
             //
@@ -212,7 +216,28 @@ namespace NotepadPlus
                 this.syntaxMenuItemPython,
                 this.syntaxMenuItemJS
             });
-            
+            //
+            // editMenuItemChangeType
+            //
+            this.editMenuItemChangeType.Name = "editMenuItemChangeType";
+            this.editMenuItemChangeType.Text = "Изменить формат документа";
+            this.editMenuItemChangeType.DropDownItems.AddRange(new System.Windows.Forms.ToolStripMenuItem[]
+            {
+                this.typeMenuItemPlaintext,
+                this.typeMenuItemRichtext
+            });
+            //
+            // typeMenuItemPlaintext
+            //
+            this.typeMenuItemPlaintext.Name = "typeMenuItemPlaintext";
+            this.typeMenuItemPlaintext.Text = "Текстовый документ";
+            this.typeMenuItemPlaintext.Click += new System.EventHandler(this.OnConvertToPlaintext);
+            //
+            // typeMenuItemRichtext
+            //
+            this.typeMenuItemRichtext.Name = "typeMenuItemRichtext";
+            this.typeMenuItemRichtext.Text = "Документ RTF";
+            this.typeMenuItemRichtext.Click += new System.EventHandler(this.OnConvertToRichtext);
             // 
             // dropdownEditButton
             // 
@@ -220,7 +245,8 @@ namespace NotepadPlus
             this.dropdownEditButton.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
                 this.editMenuItemUndo,
                 this.editMenuItemRedo,
-                this.editMenuItemChangeSyntax
+                this.editMenuItemChangeSyntax,
+                this.editMenuItemChangeType
             });
             this.dropdownEditButton.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.dropdownEditButton.Name = "dropdownEditButton";
@@ -363,6 +389,7 @@ namespace NotepadPlus
         private NotepadPlus.UI.NToolStripMenuItem editMenuItemUndo;
         private NotepadPlus.UI.NToolStripMenuItem editMenuItemRedo;
         private NotepadPlus.UI.NToolStripMenuItem editMenuItemChangeSyntax;
+        private NotepadPlus.UI.NToolStripMenuItem editMenuItemChangeType;
 
         private NotepadPlus.UI.NToolStripMenuItem syntaxMenuItemCs;
         private NotepadPlus.UI.NToolStripMenuItem syntaxMenuItemJava;
@@ -370,6 +397,9 @@ namespace NotepadPlus
         private NotepadPlus.UI.NToolStripMenuItem syntaxMenuItemCpp;
         private NotepadPlus.UI.NToolStripMenuItem syntaxMenuItemC;
         private NotepadPlus.UI.NToolStripMenuItem syntaxMenuItemJS;
+
+        private NotepadPlus.UI.NToolStripMenuItem typeMenuItemPlaintext;
+        private NotepadPlus.UI.NToolStripMenuItem typeMenuItemRichtext;
         
 
         private NotepadPlus.UI.NToolStripDropDownButton dropdownFileButton;

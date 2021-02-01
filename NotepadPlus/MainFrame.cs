@@ -21,7 +21,7 @@ namespace NotepadPlus
             
             AutoSaver autoSaver = new AutoSaver(tabControl);
             autoSaver.Start();
-            
+
         }
 
         public void SetApplicationUITheme(UITheme theme)
